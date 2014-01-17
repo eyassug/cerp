@@ -1,0 +1,4 @@
+_ReSharper.CERP/
+*.suo
+CERP.Core/bin/
+CERP.Core/obj/
