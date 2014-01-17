@@ -2,3 +2,7 @@ _ReSharper.CERP/
 *.suo
 CERP.Core/bin/
 CERP.Core/obj/
+CERP.Modules.Security/bin/
+CERP.Modules.Security/obj/
+CERP.Modules.Security.Tests/bin/
+CERP.Modules.Security.Tests/obj/
