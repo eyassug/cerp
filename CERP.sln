@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CERP.Modules.Security.Tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CDE8B575-3D21-4A87-AE18-1549F530D672}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CERP.Modules.Models", "CERP.Modules.Models\CERP.Modules.Models.csproj", "{21A73CD5-A6BE-49FF-BE2A-C2E5226D090D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EAB23134-E72C-40A1-AEA9-07D820B94A79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{C2ECFEEF-20D0-4D3A-88DC-7FE591EA4C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2ECFEEF-20D0-4D3A-88DC-7FE591EA4C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2ECFEEF-20D0-4D3A-88DC-7FE591EA4C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A73CD5-A6BE-49FF-BE2A-C2E5226D090D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A73CD5-A6BE-49FF-BE2A-C2E5226D090D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A73CD5-A6BE-49FF-BE2A-C2E5226D090D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A73CD5-A6BE-49FF-BE2A-C2E5226D090D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +44,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F8A87C2D-22F8-45BD-809F-A48E6EB1F7BB} = {656AFA5E-C4F6-435A-824E-397B5ACA2FB3}
 		{C2ECFEEF-20D0-4D3A-88DC-7FE591EA4C1E} = {CDE8B575-3D21-4A87-AE18-1549F530D672}
+		{21A73CD5-A6BE-49FF-BE2A-C2E5226D090D} = {EAB23134-E72C-40A1-AEA9-07D820B94A79}
 	EndGlobalSection
 EndGlobal
