@@ -49,8 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Principal\UserPrincipal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecurityModule.cs" />
+    <Compile Include="SecurityModuleSettings.cs" />
+    <Compile Include="Services\DatabaseAuthenticationService.cs" />
+    <Compile Include="SessionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CERP.Core\CERP.Core.csproj">
