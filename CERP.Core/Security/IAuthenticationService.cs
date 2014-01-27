@@ -3,7 +3,7 @@
     /// <summary>
     /// Authenticates given credentials against a list of users
     /// </summary>
-    interface IAuthenticationService
+    public interface IAuthenticationService
     {
         void Authenticate(string username, string password);
     }
