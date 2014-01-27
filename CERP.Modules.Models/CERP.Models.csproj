@@ -7,8 +7,8 @@
     <ProjectGuid>{21A73CD5-A6BE-49FF-BE2A-C2E5226D090D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CERP.Modules.Models</RootNamespace>
-    <AssemblyName>CERP.Modules.Models</AssemblyName>
+    <RootNamespace>CERP.Models</RootNamespace>
+    <AssemblyName>CERP.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
