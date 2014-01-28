@@ -8,3 +8,6 @@ CERP.Modules.Security.Tests/bin/
 CERP.Modules.Security.Tests/obj/
 CERP.Modules.Models/bin/
 CERP.Modules.Models/obj/
+CERP.Main/bin/
+CERP.Main/obj/
+CERP.sln.DotSettings.user
