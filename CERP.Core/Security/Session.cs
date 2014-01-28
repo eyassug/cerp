@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using CERP.Core.Security.Principal;
@@ -24,6 +25,7 @@ namespace CERP.Core.Security
         private readonly Guid _sessionKey;
         private readonly IUserPrincipal _principal;
         private SessionStatus _sessionStatus;
+        private string _lockKey;
         #endregion
 
         #region Constructors
@@ -32,6 +34,7 @@ namespace CERP.Core.Security
             _startTime = DateTime.UtcNow;
             _sessionKey = Guid.NewGuid();
             _sessionStatus = SessionStatus.Active;
+            _lockKey = string.Empty;
         }
         /// <summary>
         /// Creates a new session for the supplied principal
@@ -75,6 +78,23 @@ namespace CERP.Core.Security
             _sessionStatus = SessionStatus.Destroyed;
         }
 
+        public string Lock()
+        {
+            if(_sessionStatus != SessionStatus.Active)
+                throw new SecurityException("The session instance is not active, and hence cannot be locked.");
+            _sessionStatus = SessionStatus.Locked;
+            return (_lockKey = Guid.NewGuid().ToString());
+        }
+
+        public void Activate(string activationKey)
+        {
+            if(_sessionStatus != SessionStatus.Locked)
+                throw new SecurityException("The session instance could not be activated due to its current state.");
+            if(_lockKey != activationKey)
+                throw new SecurityException("Invalid activation key.");
+            _sessionStatus = SessionStatus.Active;
+            _lockKey = string.Empty;
+        }
         #endregion
     }
 }
