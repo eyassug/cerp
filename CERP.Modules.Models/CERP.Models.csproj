@@ -39,18 +39,46 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="AddressType.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="ContactType.cs" />
+    <Compile Include="CountryRegion.cs" />
+    <Compile Include="CountryRegionCurrency.cs" />
+    <Compile Include="CreditCard.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="CurrencyRate.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerAddress.cs" />
+    <Compile Include="Individual.cs" />
+    <Compile Include="ProductVendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrderDetail.cs" />
+    <Compile Include="PurchaseOrderHeader.cs" />
+    <Compile Include="SalesOrderDetail.cs" />
+    <Compile Include="SalesOrderHeader.cs" />
+    <Compile Include="SalesPerson.cs" />
+    <Compile Include="SalesPersonQuotaHistory.cs" />
+    <Compile Include="SalesReason.cs" />
+    <Compile Include="SalesTaxRate.cs" />
+    <Compile Include="SalesTerritory.cs" />
+    <Compile Include="ShipMethod.cs" />
+    <Compile Include="ShoppingCartItem.cs" />
+    <Compile Include="StateProvince.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="StoreContact.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="VendorAddress.cs" />
+    <Compile Include="VendorContact.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
