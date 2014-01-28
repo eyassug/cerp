@@ -1,22 +1,24 @@
 ﻿using System;
+using CERP.Core.Security;
+using CERP.Modules.Security.Services;
 using Ninject.Modules;
 
 namespace CERP.Modules.Security
 {
-    class SecurityModule : NinjectModule
+    public class SecurityModule : NinjectModule
     {
-        private readonly SecurityModuleSettings _settings;
+        internal static SecurityModuleSettings Settings;
 
         public SecurityModule(SecurityModuleSettings settings)
         {
             if(settings == null)
                 throw new ArgumentNullException("settings");
-            _settings = settings;
+            Settings = settings;
         }
 
         public override void Load()
         {
-            throw new System.NotImplementedException();
+            Bind<IAuthenticationService>().To<DatabaseAuthenticationService>();
         }
     }
 }

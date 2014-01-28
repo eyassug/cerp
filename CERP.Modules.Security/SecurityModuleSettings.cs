@@ -8,6 +8,6 @@ namespace CERP.Modules.Security
 {
     public class SecurityModuleSettings
     {
-
+        public string ConnectionString { get; set; }
     }
 }
