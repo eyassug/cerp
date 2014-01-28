@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="AddressType.cs" />
+    <Compile Include="BusinessEntity.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactType.cs" />
     <Compile Include="CountryRegion.cs" />
@@ -69,6 +70,10 @@
     <Compile Include="StateProvince.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="StoreContact.cs" />
+    <Compile Include="UserAccount.cs" />
+    <Compile Include="Views\User.cs" />
+    <Compile Include="UserAccountUserGroup.cs" />
+    <Compile Include="UserGroup.cs" />
     <Compile Include="Vendor.cs" />
     <Compile Include="VendorAddress.cs" />
     <Compile Include="VendorContact.cs" />
