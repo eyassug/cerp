@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="DataManagementModule.cs" />
     <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\ProductCategory.cs" />
+    <Compile Include="IProductCategoryService.cs" />
     <Compile Include="IProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ProductService.cs" />
