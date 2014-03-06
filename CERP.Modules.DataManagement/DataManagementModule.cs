@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ninject.Modules;
 
 namespace CERP.Modules.DataManagement
 {
-    public class DataManagementModule
+    public class DataManagementModule : NinjectModule
     {
+        public override void Load()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
