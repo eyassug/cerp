@@ -11,3 +11,9 @@ CERP.Modules.Models/obj/
 CERP.Main/bin/
 CERP.Main/obj/
 CERP.sln.DotSettings.user
+*.onetoc2
+CERP.Modules.DataManagement.Tests/bin/
+CERP.Modules.DataManagement.Tests/obj/
+CERP.Modules.DataManagement/bin/
+CERP.Modules.DataManagement/obj/
+TestResults/
