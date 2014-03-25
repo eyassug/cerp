@@ -1,18 +1,46 @@
-﻿namespace CERP.Modules.DataManagement.Services
+﻿using System.Collections.Generic;
+using CERP.Modules.DataManagement.Domain;
+
+namespace CERP.Modules.DataManagement.Services
 {
     class ProductService : IProductService
     {
-        public void AddProduct(Domain.Product product)
+        public void AddProduct(Product product)
         {
             throw new System.NotImplementedException();
         }
 
-        public void RemoveProduct(Domain.Product product)
+        public void RemoveProduct(Product product)
         {
             throw new System.NotImplementedException();
         }
 
-        public void DeactiveProduct(Domain.Product product)
+        public void DisableProduct(Product product)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ICollection<Product> GetProducts()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ICollection<Product> GetInactiveProducts()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Rename(Product product, string newName)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ICollection<Product> SearchProducts(string query)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ChangeProductNumber(Product product, string newProductNumber)
         {
             throw new System.NotImplementedException();
         }
