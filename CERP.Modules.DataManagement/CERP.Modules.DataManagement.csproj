@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataManagementModule.cs" />
+    <Compile Include="Domain\Manufacturer.cs" />
     <Compile Include="Domain\Product.cs" />
     <Compile Include="Domain\ProductCategory.cs" />
+    <Compile Include="IManufacturerService.cs" />
     <Compile Include="IProductCategoryService.cs" />
     <Compile Include="IProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
