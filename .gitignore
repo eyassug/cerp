@@ -17,3 +17,7 @@ CERP.Modules.DataManagement.Tests/obj/
 CERP.Modules.DataManagement/bin/
 CERP.Modules.DataManagement/obj/
 TestResults/
+CERP.Modules.Procurement.Tests/bin/
+CERP.Modules.Procurement.Tests/obj/
+CERP.Modules.Procurement/bin/
+CERP.Modules.Procurement/obj/
