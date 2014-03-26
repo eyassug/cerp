@@ -30,7 +30,7 @@ namespace CERP.Modules.DataManagement.Services
             throw new System.NotImplementedException();
         }
 
-        public void Rename(Product product, string newName)
+        public void RenameProduct(Product product, string newName)
         {
             throw new System.NotImplementedException();
         }

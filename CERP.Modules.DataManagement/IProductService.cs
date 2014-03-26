@@ -35,7 +35,7 @@ namespace CERP.Modules.DataManagement
         /// </summary>
         /// <param name="product">Product to be renamed</param>
         /// <param name="newName">New name to replace the existing one</param>
-        void Rename(Product product, string newName);
+        void RenameProduct(Product product, string newName);
         /// <summary>
         /// Returns all products that match the given query
         /// </summary>
