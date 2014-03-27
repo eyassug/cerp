@@ -7,6 +7,6 @@
         public string Name { get; set; }
         public bool IsActive { get; set; }
         public ProductCategory ProductCategory { get; set; }
-
+        public Manufacturer Manufacturer { get; set; }
     }
 }
