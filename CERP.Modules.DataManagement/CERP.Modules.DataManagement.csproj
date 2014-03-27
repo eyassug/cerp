@@ -49,13 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\DataManagementContext.cs" />
     <Compile Include="DataManagementModule.cs" />
     <Compile Include="Domain\Manufacturer.cs" />
     <Compile Include="Domain\Product.cs" />
     <Compile Include="Domain\ProductCategory.cs" />
+    <Compile Include="Domain\Supplier.cs" />
+    <Compile Include="Domain\Unit.cs" />
     <Compile Include="IManufacturerService.cs" />
     <Compile Include="IProductCategoryService.cs" />
     <Compile Include="IProductService.cs" />
+    <Compile Include="ISupplierService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ProductService.cs" />
   </ItemGroup>
@@ -63,7 +67,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CERP.Modules.Models\CERP.Models.csproj">
+      <Project>{21a73cd5-a6be-49ff-be2a-c2e5226d090d}</Project>
+      <Name>CERP.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
