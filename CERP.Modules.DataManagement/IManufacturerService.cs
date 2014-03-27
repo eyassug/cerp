@@ -25,11 +25,6 @@ namespace CERP.Modules.DataManagement
         /// </summary>
         ICollection<Manufacturer> GetManufacturers();
         /// <summary>
-        /// Gets all products listed under a particular Manufacturer
-        /// </summary>
-        /// <param name="manufacturer">Manufacturer to search products under</param>
-        ICollection<Product> GetProducts(Manufacturer manufacturer);
-        /// <summary>
         /// Returns all manufacturers that satisfy the given query
         /// </summary>
         /// <param name="query">Query to search Manufacturers from the database</param>

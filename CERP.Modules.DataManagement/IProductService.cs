@@ -48,6 +48,21 @@ namespace CERP.Modules.DataManagement
         /// <param name="product">Product</param>
         /// <param name="newProductNumber">New identification number to be assigned for the product</param>
         void ChangeProductNumber(Product product, string newProductNumber);
+        /// <summary>
+        /// Gets all products listed under a particular category (including products in sub-categories)
+        /// </summary>
+        /// <param name="productCategory">Product category to search</param>
+        ICollection<Product> GetProducts(ProductCategory productCategory);
+        /// <summary>
+        /// Gets all products listed under a particular Manufacturer
+        /// </summary>
+        /// <param name="manufacturer">Manufacturer to search products under</param>
+        ICollection<Product> GetProducts(Manufacturer manufacturer);
+        /// <summary>
+        /// Gets all Units (Units of measure)
+        /// </summary>
+        /// <returns></returns>
+        ICollection<Unit> GetUnits();
 
     }
 }
