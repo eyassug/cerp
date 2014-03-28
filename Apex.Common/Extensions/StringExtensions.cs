@@ -1,26 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿// ReSharper disable CheckNamespace
 namespace System
+// ReSharper restore CheckNamespace
 {
     public static class StringExtensions
     {
-        
-        public static string Sanitise(this string unsanitisedString)
+        /// <summary>
+        /// Removes single-quote (') character from string to protect against SQL-Injection attacks
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string Sanitise(this string s)
         {
-            if (unsanitisedString.Sanitised())
-                return unsanitisedString;
-            unsanitisedString = unsanitisedString.Replace('\'',' ');
-            return unsanitisedString;
+            // TODO: Match string against a regex and remove all unnecessary characters
+            if (s.Sanitised())
+                return s;
+            s = s.Replace('\'',' ');
+            return s;
         }
 
-        public static bool Sanitised(this string unsanitisedString)
+        /// <summary>
+        /// Checks whether the supplied string is safe or not
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static bool Sanitised(this string s)
         {
             // TODO: Match string against a regex
-            return !unsanitisedString.Contains("'");
+            return !s.Contains("'");
         }
     }
 }
