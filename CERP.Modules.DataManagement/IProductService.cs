@@ -9,7 +9,7 @@ namespace CERP.Modules.DataManagement
         /// Adds a new Product to the database
         /// </summary>
         /// <param name="product">Product entity to be added</param>
-        void AddProduct(Product product);
+        void AddNewProduct(Product product);
         /// <summary>
         /// Removes the given Product from the database provided that the product doesn't have associated transactions
         /// </summary>

@@ -23,7 +23,7 @@ namespace CERP.Modules.DataManagement.Services
 
         #region IProductService Implementation
 
-        public void AddProduct(Product product)
+        public void AddNewProduct(Product product)
         {
             // Validation
             if(product.Name.Trim() == string.Empty || product.ProductCategory == null || product.Manufacturer == null )
