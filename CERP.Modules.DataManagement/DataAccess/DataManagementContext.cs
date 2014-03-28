@@ -1,10 +1,11 @@
 ﻿using System.Data.Entity;
+using Apex.Common.Data;
 using CERP.Models.Business;
 using CERP.Models.Inventory;
 
 namespace CERP.Modules.DataManagement.DataAccess
 {
-    class DataManagementContext : DbContext
+    class DataManagementContext : DbContext, IUnitOfWork
     {
         #region Constructors
 
@@ -27,5 +28,16 @@ namespace CERP.Modules.DataManagement.DataAccess
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
         public virtual DbSet<TaxPayer> TaxPayers { get; set; }
 
+        #region IUnitOfWork Implementation
+        public void CommitChanges()
+        {
+            SaveChanges();
+        }
+
+        public void RollBack()
+        {
+            throw new System.NotImplementedException();
+        }
+        #endregion
     }
 }

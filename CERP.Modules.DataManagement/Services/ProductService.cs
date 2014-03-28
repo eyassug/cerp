@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.SqlServer;
 using System.Linq;
+using Apex.Common.Data;
 using CERP.Modules.DataManagement.DataAccess;
 using CERP.Modules.DataManagement.Domain;
+using CERP.Modules.DataManagement.Repository;
 
 namespace CERP.Modules.DataManagement.Services
 {
@@ -10,6 +13,7 @@ namespace CERP.Modules.DataManagement.Services
     {
         #region Fields
         private readonly DataManagementContext _context;
+        private readonly ProductRepository _productRepository;
         #endregion
 
         #region Constructors
@@ -17,6 +21,14 @@ namespace CERP.Modules.DataManagement.Services
         public ProductService()
         {
             _context = new DataManagementContext();
+        }
+
+        public ProductService(IUnitOfWork unitOfWork)
+        {
+            if(unitOfWork == null)
+                throw new ArgumentNullException("unitOfWork");
+            _context = unitOfWork as DataManagementContext;
+            _productRepository = new ProductRepository(_context);
         }
 
         #endregion
@@ -38,8 +50,8 @@ namespace CERP.Modules.DataManagement.Services
                                      ProductNumber = "N/A",
                                      UnitMeasureCode = "PC"
                                  };
-            _context.Products.Add(newProduct);
-            _context.SaveChanges();
+            _productRepository.Add(newProduct);
+            _context.CommitChanges();
         }
 
         public void RemoveProduct(Product product)
@@ -50,7 +62,7 @@ namespace CERP.Modules.DataManagement.Services
             try
             {
                 _context.Products.Remove(p);
-                _context.SaveChanges();
+                _context.CommitChanges();
             }
             catch (Exception)
             {
@@ -64,7 +76,7 @@ namespace CERP.Modules.DataManagement.Services
             if(p == null)
                 throw new Exception("Product not found!!!");
             p.IsActive = false;
-            _context.SaveChanges();
+            _context.CommitChanges();
         }
 
         public ICollection<Product> GetProducts()
@@ -107,22 +119,22 @@ namespace CERP.Modules.DataManagement.Services
             if(p == null)
                 throw new Exception("Product doesn't exist.");
             p.Name = newName;
-            _context.SaveChanges();
+            _context.CommitChanges();
         }
 
         public ICollection<Product> SearchProducts(string query)
         {
             if (string.IsNullOrWhiteSpace(query))
                 return GetProducts();
-            var sanitisedQuery = query.Trim().ToLower();
+            var sanitisedQuery = string.Format("%{0}%", query.Sanitise().Trim());
             var searchResults = from p in _context.Products
                                 join m in _context.Manufacturers on p.ManufacturerID equals m.ManufacturerID
                                 join c in _context.ProductCategories on p.ProductCategoryID equals c.ProductCategoryID
                                 where p.IsActive &&
-                                (p.Name.ToLower().Contains(sanitisedQuery) ||
-                                p.ProductNumber.ToLower().Contains(sanitisedQuery) ||
-                                m.Name.ToLower().Contains(sanitisedQuery) ||
-                                c.Name.ToLower().Contains(sanitisedQuery))
+                                (SqlFunctions.PatIndex(sanitisedQuery,p.Name) > 0 ||
+                                SqlFunctions.PatIndex(sanitisedQuery, p.ProductNumber) > 0 ||
+                                SqlFunctions.PatIndex(sanitisedQuery, c.Name) > 0 ||
+                                SqlFunctions.PatIndex(sanitisedQuery, m.Name) > 0)
                                 select new Product
                                 {
                                     ProductID = p.ProductID,
@@ -142,7 +154,7 @@ namespace CERP.Modules.DataManagement.Services
             if(p == null)
                 throw new Exception("Product doesn't exist.");
             p.ProductNumber = newProductNumber;
-            _context.SaveChanges();
+            _context.CommitChanges();
         }
 
 
