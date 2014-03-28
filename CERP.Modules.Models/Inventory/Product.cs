@@ -13,5 +13,6 @@ namespace CERP.Models.Inventory
         public int ProductCategoryID { get; set; }
         public int ManufacturerID { get; set; }
         public string UnitMeasureCode { get; set; }
+        public bool IsActive { get; set; }
     }
 }

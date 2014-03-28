@@ -21,6 +21,8 @@ namespace CERP.Modules.DataManagement.Services
 
         #endregion
 
+        #region IProductService Implementation
+
         public void AddProduct(Product product)
         {
             // Validation
@@ -42,22 +44,61 @@ namespace CERP.Modules.DataManagement.Services
 
         public void RemoveProduct(Product product)
         {
-            throw new System.NotImplementedException();
+            var p = _context.Products.SingleOrDefault(m => m.ProductID == product.ProductID);
+            if(p == null)
+                throw new Exception("The supplied product was not found in the database!!!");
+            try
+            {
+                _context.Products.Remove(p);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw new Exception("Could not remove product. Product has associated transactions.");
+            }
         }
 
         public void DisableProduct(Product product)
         {
-            throw new System.NotImplementedException();
+            var p = _context.Products.SingleOrDefault(m => m.ProductID == product.ProductID);
+            if(p == null)
+                throw new Exception("Product not found!!!");
+            p.IsActive = false;
+            _context.SaveChanges();
         }
 
         public ICollection<Product> GetProducts()
         {
-            throw new System.NotImplementedException();
+            var inactiveProducts = from p in _context.Products
+                                   join m in _context.Manufacturers on p.ManufacturerID equals m.ManufacturerID
+                                   join c in _context.ProductCategories on p.ProductCategoryID equals c.ProductCategoryID
+                                   where p.IsActive
+                                   select new Product
+                                   {
+                                       ProductID = p.ProductID,
+                                       Name = p.Name,
+                                       ProductNumber = p.ProductNumber,
+                                       Manufacturer = new Manufacturer { ManufacturerID = p.ManufacturerID, Name = m.Name },
+                                       ProductCategory = new ProductCategory { ProductCategoryID = p.ProductCategoryID }
+                                   };
+            return inactiveProducts.ToList();
         }
 
         public ICollection<Product> GetInactiveProducts()
         {
-            throw new System.NotImplementedException();
+            var inactiveProducts = from p in _context.Products
+                                   join m in _context.Manufacturers on p.ManufacturerID equals m.ManufacturerID
+                                   join c in _context.ProductCategories on p.ProductCategoryID equals c.ProductCategoryID
+                                   where p.IsActive == false
+                                   select new Product
+                                              {
+                                                  ProductID = p.ProductID,
+                                                  Name = p.Name,
+                                                  ProductNumber = p.ProductNumber,
+                                                  Manufacturer = new Manufacturer {ManufacturerID = p.ManufacturerID, Name = m.Name },
+                                                  ProductCategory = new ProductCategory {ProductCategoryID = p.ProductCategoryID}
+                                              };
+            return inactiveProducts.ToList();
         }
 
         public void RenameProduct(Product product, string newName)
@@ -71,28 +112,81 @@ namespace CERP.Modules.DataManagement.Services
 
         public ICollection<Product> SearchProducts(string query)
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrWhiteSpace(query))
+                return GetProducts();
+            var sanitisedQuery = query.Trim().ToLower();
+            var searchResults = from p in _context.Products
+                                join m in _context.Manufacturers on p.ManufacturerID equals m.ManufacturerID
+                                join c in _context.ProductCategories on p.ProductCategoryID equals c.ProductCategoryID
+                                where p.IsActive &&
+                                (p.Name.ToLower().Contains(sanitisedQuery) ||
+                                p.ProductNumber.ToLower().Contains(sanitisedQuery) ||
+                                m.Name.ToLower().Contains(sanitisedQuery) ||
+                                c.Name.ToLower().Contains(sanitisedQuery))
+                                select new Product
+                                {
+                                    ProductID = p.ProductID,
+                                    Name = p.Name,
+                                    ProductNumber = p.ProductNumber,
+                                    Manufacturer = new Manufacturer { ManufacturerID = p.ManufacturerID, Name = m.Name },
+                                    ProductCategory = new ProductCategory { ProductCategoryID = p.ProductCategoryID }
+                                };
+            return searchResults.ToList();
         }
 
         public void ChangeProductNumber(Product product, string newProductNumber)
         {
-            throw new System.NotImplementedException();
+            if(string.IsNullOrWhiteSpace(newProductNumber))
+                throw new Exception("Invalid Product Number");
+            var p = _context.Products.SingleOrDefault(m => m.ProductID == product.ProductID);
+            if(p == null)
+                throw new Exception("Product doesn't exist.");
+            p.ProductNumber = newProductNumber;
+            _context.SaveChanges();
         }
 
 
         public ICollection<Product> GetProducts(ProductCategory productCategory)
         {
-            throw new System.NotImplementedException();
+            if(productCategory == null)
+                throw new ArgumentNullException("productCategory");
+            var products = from p in _context.Products
+                           join m in _context.Manufacturers on p.ManufacturerID equals m.ManufacturerID
+                           where p.ProductCategoryID == productCategory.ProductCategoryID
+                           select new Product
+                                      {
+                                          ProductID = p.ProductID,
+                                          Name = p.Name,
+                                          ProductNumber = p.ProductNumber,
+                                          ProductCategory = productCategory,
+                                          Manufacturer = new Manufacturer {ManufacturerID = m.ManufacturerID, Name = m.Name}
+                                      };
+            return products.ToList();
         }
 
         public ICollection<Product> GetProducts(Manufacturer manufacturer)
         {
-            throw new System.NotImplementedException();
+            if (manufacturer == null)
+                throw new ArgumentNullException("manufacturer");
+            var products = from p in _context.Products
+                           join c in _context.ProductCategories on p.ProductCategoryID equals c.ProductCategoryID
+                           where p.ProductCategoryID == manufacturer.ManufacturerID
+                           select new Product
+                           {
+                               ProductID = p.ProductID,
+                               Name = p.Name,
+                               ProductNumber = p.ProductNumber,
+                               ProductCategory = new ProductCategory {ProductCategoryID = c.ProductCategoryID, Name = c.Name},
+                               Manufacturer = manufacturer
+                           };
+            return products.ToList();
         }
 
         public ICollection<Unit> GetUnits()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
+
+        #endregion
     }
 }
