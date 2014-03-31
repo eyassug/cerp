@@ -16,7 +16,7 @@ namespace CERP.Core
             get { return _currentSession; }
             set
             {
-                if(_currentSession != null && _currentSession == value)
+                if(_currentSession != null || _currentSession == value)
                     return;
                 _currentSession = value;
             }

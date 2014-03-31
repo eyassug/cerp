@@ -21,10 +21,12 @@ namespace CERP.Modules.DataManagement.Tests
         {
             var s = new Supplier
                             {
-                                Name = "TYG PLC"
+                                Name = "Cyclops"
                                 
                             };
             _supplierService.AddNewSupplier(s);
+
+            
         }
 
         [TestMethod]

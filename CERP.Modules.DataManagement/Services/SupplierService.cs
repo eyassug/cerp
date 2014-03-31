@@ -9,6 +9,13 @@ namespace CERP.Modules.DataManagement.Services
 {
     public class SupplierService : ISupplierService
     {
+        #region Fields
+
+        private const string SupplierPartnerType = "S";
+        private const string CustomerPartnerType = "C";
+
+        #endregion
+
         #region ISupplierService Implementation
         public void AddNewSupplier(Supplier supplier)
         {
@@ -25,7 +32,13 @@ namespace CERP.Modules.DataManagement.Services
                 {
                     Name = supplier.Name
                 };
+                var supplierPartnerType = new Models.Business.PartnerType
+                                              {
+                                                  Partner = newSupplier,
+                                                  PartnerTypeCode = SupplierPartnerType
+                                              };
                 context.Partners.Add(newSupplier);
+                context.PartnerTypes.Add(supplierPartnerType);
                 context.SaveChanges();
             }
         }
