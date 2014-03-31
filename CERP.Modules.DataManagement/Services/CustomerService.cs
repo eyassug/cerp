@@ -8,7 +8,9 @@ using CERP.Modules.DataManagement.Domain;
 namespace CERP.Modules.DataManagement.Services
 {
        public class CustomerServices : ICustomerService
-    {
+       {
+           private const string CustomerPartnerType = "C";
+           
         #region CustomerServices Implementation
         public void AddNewCustomer(Customer customer)
         {
@@ -25,7 +27,13 @@ namespace CERP.Modules.DataManagement.Services
                 {
                     Name = customer.Name
                 };
+                var partnerType = new Models.Business.PartnerType
+                                      {
+                                          PartnerTypeCode = CustomerPartnerType,
+                                          Partner = newCustomer
+                                      };
                 context.Partners.Add(newCustomer);
+                context.PartnerTypes.Add(partnerType);
                 context.SaveChanges();
             }
         }
