@@ -54,6 +54,7 @@
     <Compile Include="Domain\Customer.cs" />
     <Compile Include="Domain\Location.cs" />
     <Compile Include="Domain\Manufacturer.cs" />
+    <Compile Include="Domain\PartnerType.cs" />
     <Compile Include="Domain\Product.cs" />
     <Compile Include="Domain\ProductCategory.cs" />
     <Compile Include="Domain\Supplier.cs" />
