@@ -86,7 +86,7 @@
     <Compile Include="StateProvince.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="StoreContact.cs" />
-    <Compile Include="UserAccount.cs" />
+    <Compile Include="Security\UserAccount.cs" />
     <Compile Include="Views\User.cs" />
     <Compile Include="UserAccountUserGroup.cs" />
     <Compile Include="UserGroup.cs" />
