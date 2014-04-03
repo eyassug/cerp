@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Apex.Common.Data;
 using CERP.Core.Security;
+using CERP.Modules.Security.DataAccess;
 using CERP.Modules.Security.Repository;
 
 namespace CERP.Modules.Security.Services
