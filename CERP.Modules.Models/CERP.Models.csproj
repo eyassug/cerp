@@ -46,6 +46,8 @@
     <Compile Include="BusinessEntity.cs" />
     <Compile Include="Business\Partner.cs" />
     <Compile Include="Business\PartnerType.cs" />
+    <Compile Include="Inventory\Batch.cs" />
+    <Compile Include="Inventory\InventoryAccount.cs" />
     <Compile Include="Inventory\Product.cs" />
     <Compile Include="Inventory\ProductCategory.cs" />
     <Compile Include="Business\TaxPayer.cs" />
