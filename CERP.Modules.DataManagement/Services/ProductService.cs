@@ -47,7 +47,7 @@ namespace CERP.Modules.DataManagement.Services
                                      Name = product.Name,
                                      ManufacturerID = product.Manufacturer.ManufacturerID,
                                      ProductCategoryID = product.ProductCategory.ProductCategoryID,
-                                     ProductNumber = "N/A",
+                                     ProductNumber = product.ProductNumber,
                                      UnitMeasureCode = "PC"
                                  };
             _productRepository.Add(newProduct);
