@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caching\ICacheable.cs" />
+    <Compile Include="Caching\ICachedRepository.cs" />
     <Compile Include="Cryptography\HashAlgorithms.cs" />
     <Compile Include="Cryptography\EncryptionService.cs" />
     <Compile Include="Data\EntityFrameworkRepository.cs" />
