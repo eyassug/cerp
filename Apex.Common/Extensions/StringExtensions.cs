@@ -1,4 +1,7 @@
 ﻿// ReSharper disable CheckNamespace
+
+using Apex.Common.Cryptography;
+
 namespace System
 // ReSharper restore CheckNamespace
 {
@@ -27,6 +30,12 @@ namespace System
         {
             // TODO: Match string against a regex
             return !s.Contains("'");
+        }
+
+        public static string Encrypt(this string s, HashAlgorithms hashAlgorithm)
+        {
+            var encryptionService = new EncryptionService(hashAlgorithm);
+            return encryptionService.Encrypt(s);
         }
     }
 }
