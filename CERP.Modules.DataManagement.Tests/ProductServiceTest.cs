@@ -33,7 +33,7 @@ namespace CERP.Modules.DataManagement.Tests
         public void RenameProduct_ShouldPass()
         {
             var p = new Product {ProductID = 1};
-            _productService.RenameProduct(p,"Toshiba L755 Renamed");
+            _productService.RenameProduct(p,"Toshiba L755 Re");
         }
     }
 }

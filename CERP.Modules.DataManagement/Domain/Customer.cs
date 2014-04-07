@@ -1,8 +1,8 @@
 ﻿namespace CERP.Modules.DataManagement.Domain
 {
-    public class Supplier
+    public  class Customer
     {
-        public int SupplierID { get; set; }
+        public int CustomerID { get; set; }
         public string Name { get; set; }
     }
 }

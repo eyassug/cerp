@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -39,6 +43,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
@@ -46,6 +54,7 @@
     <Compile Include="BusinessEntity.cs" />
     <Compile Include="Business\Partner.cs" />
     <Compile Include="Business\PartnerType.cs" />
+    <Compile Include="Inventory\Location.cs" />
     <Compile Include="Inventory\Batch.cs" />
     <Compile Include="Inventory\InventoryAccount.cs" />
     <Compile Include="Inventory\Product.cs" />
@@ -79,7 +88,7 @@
     <Compile Include="StateProvince.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="StoreContact.cs" />
-    <Compile Include="UserAccount.cs" />
+    <Compile Include="Security\UserAccount.cs" />
     <Compile Include="Views\User.cs" />
     <Compile Include="UserAccountUserGroup.cs" />
     <Compile Include="UserGroup.cs" />

@@ -62,13 +62,9 @@
   <ItemGroup>
     <Compile Include="ProductServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MailServiceTest.cs" />
+    <Compile Include="SupplierServicesTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Apex.Common\Apex.Common.csproj">
-      <Project>{62d207fb-8713-4b55-bebb-9d90fd78f0df}</Project>
-      <Name>Apex.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CERP.Core\CERP.Core.csproj">
       <Project>{31588f31-2c0d-4bd0-8ad4-310859094d9c}</Project>
       <Name>CERP.Core</Name>

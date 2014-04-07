@@ -1,4 +1,6 @@
-﻿namespace CERP.Modules.Procurement.Domain
+﻿using CERP.Modules.DataManagement.Domain;
+
+namespace CERP.Modules.Procurement.Domain
 {
     public class OrderDetail
     {

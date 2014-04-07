@@ -2,6 +2,10 @@
 using Apex.Common.Data;
 using CERP.Models.Business;
 using CERP.Models.Inventory;
+using Location = CERP.Modules.DataManagement.Domain.Location;
+using Manufacturer = CERP.Models.Business.Manufacturer;
+using Product = CERP.Models.Inventory.Product;
+using ProductCategory = CERP.Models.Inventory.ProductCategory;
 
 namespace CERP.Modules.DataManagement.DataAccess
 {
@@ -10,7 +14,7 @@ namespace CERP.Modules.DataManagement.DataAccess
         #region Constructors
 
         public DataManagementContext()
-            : this(@"Data Source=.\SQLSERVER;Initial Catalog=CERP;Integrated Security=True;")
+            : this(@"Data Source=Yesammy-pc;Initial Catalog=CERP;Integrated Security=True;")
         {
         }
 
@@ -27,6 +31,8 @@ namespace CERP.Modules.DataManagement.DataAccess
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
         public virtual DbSet<TaxPayer> TaxPayers { get; set; }
+        public virtual DbSet<Location> Locations { get; set; }
+        public virtual DbSet<UnitMeasure> UnitMeasures { get; set; }
 
         #region IUnitOfWork Implementation
         public void CommitChanges()

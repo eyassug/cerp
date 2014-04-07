@@ -1,13 +1,17 @@
 ﻿using System.Data.Entity;
 using Apex.Common.Data;
-using CERP.Models.Views;
+using CERP.Models.Security;
 
-namespace CERP.Modules.Security
+namespace CERP.Modules.Security.DataAccess
 {
     class SecurityDataContext : DbContext, IUnitOfWork
     {
         public SecurityDataContext()
-            : base(SecurityModule.Settings.ConnectionString)
+            : this(@"Data Source=Yesammy-pc;Initial Catalog=CERP;Integrated Security=True;")
+        {
+        }
+        public SecurityDataContext(string nameOrConnectionString)
+            : base(nameOrConnectionString)
         {
         }
 
@@ -18,7 +22,7 @@ namespace CERP.Modules.Security
 
         #region DbSets
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserAccount> Users { get; set; }
 
         #endregion
 

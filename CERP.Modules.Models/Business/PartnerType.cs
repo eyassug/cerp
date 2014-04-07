@@ -10,5 +10,7 @@ namespace CERP.Models.Business
         public int PartnerID { get; set; }
         [Key, Column(Order = 1)]
         public string PartnerTypeCode { get; set; }
+
+        public virtual Partner Partner { get; set; }
     }
 }
