@@ -30,3 +30,6 @@ CERP.Modules.HumanResources.Controls/bin/
 CERP.Modules.HumanResources.Controls/obj/
 CERP.Modules.HumanResources.Tests/obj/
 CERP.Modules.HumanResources.Tests/bin/
+CERP.Start/bin/
+CERP.Start/obj/
+*.licx
