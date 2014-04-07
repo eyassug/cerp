@@ -26,3 +26,7 @@ Apex.Common/bin/
 Apex.Common/obj/
 CERP.Modules.HumanResources/obj/
 CERP.Modules.HumanResources/bin/
+CERP.Modules.HumanResources.Controls/bin/
+CERP.Modules.HumanResources.Controls/obj/
+CERP.Modules.HumanResources.Tests/obj/
+CERP.Modules.HumanResources.Tests/bin/
