@@ -28,14 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shell));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnEmployees = new DevExpress.XtraBars.BarButtonItem();
+            this.newPayrollTerm = new DevExpress.XtraBars.BarButtonItem();
             this.hrPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.employeesPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.payrollPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.tabManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.smallImageCollection = new DevExpress.Utils.ImageCollection();
+            this.largeImageCollection = new DevExpress.Utils.ImageCollection();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smallImageCollection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.largeImageCollection)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -43,9 +50,10 @@
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
-            this.btnEmployees});
+            this.btnEmployees,
+            this.newPayrollTerm});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 2;
+            this.ribbon.MaxItemId = 3;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.hrPage});
@@ -59,10 +67,17 @@
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnEmployeesClick);
             // 
+            // newPayrollTerm
+            // 
+            this.newPayrollTerm.Caption = "New Payroll";
+            this.newPayrollTerm.Id = 2;
+            this.newPayrollTerm.Name = "newPayrollTerm";
+            // 
             // hrPage
             // 
             this.hrPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.employeesPageGroup});
+            this.employeesPageGroup,
+            this.payrollPageGroup});
             this.hrPage.Name = "hrPage";
             this.hrPage.Text = "Human Resources";
             // 
@@ -71,6 +86,12 @@
             this.employeesPageGroup.ItemLinks.Add(this.btnEmployees);
             this.employeesPageGroup.Name = "employeesPageGroup";
             this.employeesPageGroup.Text = "Employees";
+            // 
+            // payrollPageGroup
+            // 
+            this.payrollPageGroup.ItemLinks.Add(this.newPayrollTerm);
+            this.payrollPageGroup.Name = "payrollPageGroup";
+            this.payrollPageGroup.Text = "Payroll";
             // 
             // ribbonStatusBar
             // 
@@ -82,6 +103,14 @@
             // tabManager
             // 
             this.tabManager.MdiParent = this;
+            // 
+            // smallImageCollection
+            // 
+            this.smallImageCollection.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("smallImageCollection.ImageStream")));
+            // 
+            // largeImageCollection
+            // 
+            this.largeImageCollection.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("largeImageCollection.ImageStream")));
             // 
             // Shell
             // 
@@ -98,6 +127,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smallImageCollection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.largeImageCollection)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,5 +141,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem btnEmployees;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabManager;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup payrollPageGroup;
+        private DevExpress.XtraBars.BarButtonItem newPayrollTerm;
+        private DevExpress.Utils.ImageCollection smallImageCollection;
+        private DevExpress.Utils.ImageCollection largeImageCollection;
     }
 }
