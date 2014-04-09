@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CERP.Modules.HumanResources
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CERP.Start", "CERP.Start\CERP.Start.csproj", "{E59FF71E-F3BD-4348-8829-2F3CDB34722A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CERP.Modules.HumanResources.EmailConsole", "CERP.Modules.HumanResources.EmailConsole\CERP.Modules.HumanResources.EmailConsole.csproj", "{13A94FAF-7720-4E0B-8588-EAAE7E6D7187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{E59FF71E-F3BD-4348-8829-2F3CDB34722A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E59FF71E-F3BD-4348-8829-2F3CDB34722A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E59FF71E-F3BD-4348-8829-2F3CDB34722A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A94FAF-7720-4E0B-8588-EAAE7E6D7187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A94FAF-7720-4E0B-8588-EAAE7E6D7187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A94FAF-7720-4E0B-8588-EAAE7E6D7187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A94FAF-7720-4E0B-8588-EAAE7E6D7187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +126,7 @@ Global
 		{E59FF71E-F3BD-4348-8829-2F3CDB34722A} = {6639A136-9761-42F5-BB3C-DDAE81CEE6B9}
 		{43B060A1-CD2B-4AC5-AFB8-54189B68AA52} = {764C3214-C565-450A-9EA7-C9E6333414DC}
 		{965A1CD2-5631-471A-A7D1-9C1982A25352} = {764C3214-C565-450A-9EA7-C9E6333414DC}
+		{13A94FAF-7720-4E0B-8588-EAAE7E6D7187} = {764C3214-C565-450A-9EA7-C9E6333414DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.Cryptography.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.Cryptography.5.0.505.0\lib\NET35
