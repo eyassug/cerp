@@ -66,6 +66,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Department.cs" />
+    <Compile Include="Domain\Employee.cs" />
+    <Compile Include="Domain\Payroll.cs" />
+    <Compile Include="Domain\PayrollDetail.cs" />
+    <Compile Include="HumanResourcesModule.cs" />
+    <Compile Include="HumanResourcesModuleConfiguration.cs" />
+    <Compile Include="IEmployeeService.cs" />
+    <Compile Include="IPayrollService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
