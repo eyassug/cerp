@@ -31,7 +31,7 @@ namespace CERP.Models.HumanResources
         public string MaritalStatusCode { get; set; }
 
         [NotMapped]
-        public MaritalStatus? Status
+        public MaritalStatus? EmployeeMaritalStatus
         {
             get { return MaritalStatusCode == "M" ? MaritalStatus.Married : MaritalStatus.Single; }
             set { var s = value == MaritalStatus.Married ? MaritalStatusCode = "M" : MaritalStatusCode = "S"; }
