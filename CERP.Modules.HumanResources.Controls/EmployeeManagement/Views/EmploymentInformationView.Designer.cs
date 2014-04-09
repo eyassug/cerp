@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmploymentInformationView));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl10 = new DevExpress.XtraLayout.LayoutControl();
             this.statusIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.employeeTypeLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.employmentTypeOptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nodeIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.yearCountTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.salaryTextEdit1 = new DevExpress.XtraEditors.TextEdit();
@@ -50,18 +51,21 @@
             this.layoutControlItem64 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem63 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem66 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.addDepartmentHyperLink = new DevExpress.XtraEditors.HyperLinkEdit();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.employmentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employmentTypeOptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl10)).BeginInit();
             this.layoutControl10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeTypeLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentTypeOptionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nodeIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yearCountTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit1.Properties)).BeginInit();
@@ -78,9 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem64)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem63)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem66)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addDepartmentHyperLink.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentTypeOptionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -93,19 +100,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(535, 150);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(535, 150);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
-            this.layoutControlGroup1.TextVisible = false;
             // 
             // groupControl2
             // 
@@ -120,6 +114,7 @@
             // 
             // layoutControl10
             // 
+            this.layoutControl10.Controls.Add(this.addDepartmentHyperLink);
             this.layoutControl10.Controls.Add(this.statusIdLookUpEdit);
             this.layoutControl10.Controls.Add(this.employeeTypeLookUpEdit);
             this.layoutControl10.Controls.Add(this.nodeIdLookUpEdit);
@@ -140,7 +135,7 @@
             // statusIdLookUpEdit
             // 
             this.statusIdLookUpEdit.Enabled = false;
-            this.statusIdLookUpEdit.Location = new System.Drawing.Point(339, 84);
+            this.statusIdLookUpEdit.Location = new System.Drawing.Point(334, 84);
             this.statusIdLookUpEdit.Name = "statusIdLookUpEdit";
             this.statusIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -149,13 +144,13 @@
             this.statusIdLookUpEdit.Properties.DisplayMember = "Status";
             this.statusIdLookUpEdit.Properties.NullText = "[Select Status]";
             this.statusIdLookUpEdit.Properties.ValueMember = "StatusId";
-            this.statusIdLookUpEdit.Size = new System.Drawing.Size(139, 20);
+            this.statusIdLookUpEdit.Size = new System.Drawing.Size(144, 20);
             this.statusIdLookUpEdit.StyleController = this.layoutControl10;
             this.statusIdLookUpEdit.TabIndex = 14;
             // 
             // employeeTypeLookUpEdit
             // 
-            this.employeeTypeLookUpEdit.Location = new System.Drawing.Point(339, 12);
+            this.employeeTypeLookUpEdit.Location = new System.Drawing.Point(334, 12);
             this.employeeTypeLookUpEdit.Name = "employeeTypeLookUpEdit";
             this.employeeTypeLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -163,13 +158,18 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmploymentType", "Employment Type", 95, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.employeeTypeLookUpEdit.Properties.DataSource = this.employmentTypeOptionsBindingSource;
             this.employeeTypeLookUpEdit.Properties.NullText = "[Select Employment Type]";
-            this.employeeTypeLookUpEdit.Size = new System.Drawing.Size(139, 20);
+            this.employeeTypeLookUpEdit.Size = new System.Drawing.Size(144, 20);
             this.employeeTypeLookUpEdit.StyleController = this.layoutControl10;
             this.employeeTypeLookUpEdit.TabIndex = 13;
             // 
+            // employmentTypeOptionsBindingSource
+            // 
+            this.employmentTypeOptionsBindingSource.DataMember = "EmploymentTypeOptions";
+            this.employmentTypeOptionsBindingSource.DataSource = this.employmentInfoBindingSource;
+            // 
             // nodeIdLookUpEdit
             // 
-            this.nodeIdLookUpEdit.Location = new System.Drawing.Point(104, 108);
+            this.nodeIdLookUpEdit.Location = new System.Drawing.Point(104, 118);
             this.nodeIdLookUpEdit.Name = "nodeIdLookUpEdit";
             this.nodeIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -178,7 +178,7 @@
             this.nodeIdLookUpEdit.Properties.DisplayMember = "NodeName";
             this.nodeIdLookUpEdit.Properties.NullText = "[Select Department ]";
             this.nodeIdLookUpEdit.Properties.ValueMember = "NodeId";
-            this.nodeIdLookUpEdit.Size = new System.Drawing.Size(374, 20);
+            this.nodeIdLookUpEdit.Size = new System.Drawing.Size(320, 20);
             this.nodeIdLookUpEdit.StyleController = this.layoutControl10;
             this.nodeIdLookUpEdit.TabIndex = 12;
             // 
@@ -187,16 +187,16 @@
             this.yearCountTextEdit.Enabled = false;
             this.yearCountTextEdit.Location = new System.Drawing.Point(104, 84);
             this.yearCountTextEdit.Name = "yearCountTextEdit";
-            this.yearCountTextEdit.Size = new System.Drawing.Size(139, 20);
+            this.yearCountTextEdit.Size = new System.Drawing.Size(134, 20);
             this.yearCountTextEdit.StyleController = this.layoutControl10;
             this.yearCountTextEdit.TabIndex = 10;
             // 
             // salaryTextEdit1
             // 
             this.salaryTextEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "Salary", true));
-            this.salaryTextEdit1.Location = new System.Drawing.Point(339, 60);
+            this.salaryTextEdit1.Location = new System.Drawing.Point(334, 60);
             this.salaryTextEdit1.Name = "salaryTextEdit1";
-            this.salaryTextEdit1.Size = new System.Drawing.Size(139, 20);
+            this.salaryTextEdit1.Size = new System.Drawing.Size(144, 20);
             this.salaryTextEdit1.StyleController = this.layoutControl10;
             this.salaryTextEdit1.TabIndex = 15;
             // 
@@ -211,7 +211,7 @@
             this.jobIdLookUpEdit.Properties.DisplayMember = "JobTitle";
             this.jobIdLookUpEdit.Properties.NullText = "[Select Position]";
             this.jobIdLookUpEdit.Properties.ValueMember = "JobId";
-            this.jobIdLookUpEdit.Size = new System.Drawing.Size(139, 20);
+            this.jobIdLookUpEdit.Size = new System.Drawing.Size(134, 20);
             this.jobIdLookUpEdit.StyleController = this.layoutControl10;
             this.jobIdLookUpEdit.TabIndex = 7;
             // 
@@ -234,7 +234,7 @@
             this.employeeNoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "EmployeeNumber", true));
             this.employeeNoTextEdit.Location = new System.Drawing.Point(104, 12);
             this.employeeNoTextEdit.Name = "employeeNoTextEdit";
-            this.employeeNoTextEdit.Size = new System.Drawing.Size(139, 20);
+            this.employeeNoTextEdit.Size = new System.Drawing.Size(134, 20);
             this.employeeNoTextEdit.StyleController = this.layoutControl10;
             this.employeeNoTextEdit.TabIndex = 5;
             // 
@@ -251,10 +251,12 @@
             this.layoutControlItem61,
             this.layoutControlItem64,
             this.layoutControlItem63,
-            this.layoutControlItem66});
+            this.layoutControlItem66,
+            this.emptySpaceItem1,
+            this.layoutControlItem2});
             this.layoutControlGroup10.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup10.Name = "layoutControlGroup10";
-            this.layoutControlGroup10.Size = new System.Drawing.Size(490, 140);
+            this.layoutControlGroup10.Size = new System.Drawing.Size(490, 152);
             this.layoutControlGroup10.Text = "layoutControlGroup10";
             this.layoutControlGroup10.TextVisible = false;
             // 
@@ -264,7 +266,7 @@
             this.layoutControlItem57.CustomizationFormText = "Employee No:";
             this.layoutControlItem57.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem57.Name = "layoutControlItem57";
-            this.layoutControlItem57.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem57.Size = new System.Drawing.Size(230, 24);
             this.layoutControlItem57.Text = "Employee No:";
             this.layoutControlItem57.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -284,7 +286,7 @@
             this.layoutControlItem59.CustomizationFormText = "Job Id:";
             this.layoutControlItem59.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem59.Name = "layoutControlItem59";
-            this.layoutControlItem59.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem59.Size = new System.Drawing.Size(230, 24);
             this.layoutControlItem59.Text = "Position:";
             this.layoutControlItem59.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -294,7 +296,7 @@
             this.layoutControlItem62.CustomizationFormText = "Year Count:";
             this.layoutControlItem62.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem62.Name = "layoutControlItem62";
-            this.layoutControlItem62.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem62.Size = new System.Drawing.Size(230, 24);
             this.layoutControlItem62.Text = "Service Year:";
             this.layoutControlItem62.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -302,9 +304,9 @@
             // 
             this.layoutControlItem61.Control = this.nodeIdLookUpEdit;
             this.layoutControlItem61.CustomizationFormText = "Department:";
-            this.layoutControlItem61.Location = new System.Drawing.Point(0, 96);
+            this.layoutControlItem61.Location = new System.Drawing.Point(0, 106);
             this.layoutControlItem61.Name = "layoutControlItem61";
-            this.layoutControlItem61.Size = new System.Drawing.Size(470, 24);
+            this.layoutControlItem61.Size = new System.Drawing.Size(416, 26);
             this.layoutControlItem61.Text = "Department:";
             this.layoutControlItem61.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -312,9 +314,9 @@
             // 
             this.layoutControlItem64.Control = this.employeeTypeLookUpEdit;
             this.layoutControlItem64.CustomizationFormText = "Employment Type:";
-            this.layoutControlItem64.Location = new System.Drawing.Point(235, 0);
+            this.layoutControlItem64.Location = new System.Drawing.Point(230, 0);
             this.layoutControlItem64.Name = "layoutControlItem64";
-            this.layoutControlItem64.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem64.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem64.Text = "Employment Type:";
             this.layoutControlItem64.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -322,9 +324,9 @@
             // 
             this.layoutControlItem63.Control = this.statusIdLookUpEdit;
             this.layoutControlItem63.CustomizationFormText = "Status:";
-            this.layoutControlItem63.Location = new System.Drawing.Point(235, 72);
+            this.layoutControlItem63.Location = new System.Drawing.Point(230, 72);
             this.layoutControlItem63.Name = "layoutControlItem63";
-            this.layoutControlItem63.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem63.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem63.Text = "Status:";
             this.layoutControlItem63.TextSize = new System.Drawing.Size(89, 13);
             // 
@@ -332,11 +334,24 @@
             // 
             this.layoutControlItem66.Control = this.salaryTextEdit1;
             this.layoutControlItem66.CustomizationFormText = "Salary:";
-            this.layoutControlItem66.Location = new System.Drawing.Point(235, 48);
+            this.layoutControlItem66.Location = new System.Drawing.Point(230, 48);
             this.layoutControlItem66.Name = "layoutControlItem66";
-            this.layoutControlItem66.Size = new System.Drawing.Size(235, 24);
+            this.layoutControlItem66.Size = new System.Drawing.Size(240, 24);
             this.layoutControlItem66.Text = "Salary:";
             this.layoutControlItem66.TextSize = new System.Drawing.Size(89, 13);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(535, 150);
+            this.layoutControlGroup1.Text = "layoutControlGroup1";
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -350,14 +365,48 @@
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
             // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 96);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(470, 10);
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // addDepartmentHyperLink
+            // 
+            this.addDepartmentHyperLink.EditValue = "";
+            this.addDepartmentHyperLink.Location = new System.Drawing.Point(428, 118);
+            this.addDepartmentHyperLink.Margin = new System.Windows.Forms.Padding(0);
+            this.addDepartmentHyperLink.Name = "addDepartmentHyperLink";
+            this.addDepartmentHyperLink.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.addDepartmentHyperLink.Properties.Image = ((System.Drawing.Image)(resources.GetObject("addCategoryHyperLinkEdit.Properties.Image")));
+            this.addDepartmentHyperLink.Size = new System.Drawing.Size(50, 22);
+            this.addDepartmentHyperLink.StyleController = this.layoutControl10;
+            this.addDepartmentHyperLink.TabIndex = 139;
+            this.addDepartmentHyperLink.ToolTip = "Add New Department";
+            this.addDepartmentHyperLink.ToolTipTitle = "Add";
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.addDepartmentHyperLink;
+            this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
+            this.layoutControlItem2.Location = new System.Drawing.Point(416, 106);
+            this.layoutControlItem2.MaxSize = new System.Drawing.Size(54, 26);
+            this.layoutControlItem2.MinSize = new System.Drawing.Size(54, 26);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(54, 26);
+            this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem2.Text = "layoutControlItem2";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextToControlDistance = 0;
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // employmentInfoBindingSource
             // 
             this.employmentInfoBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.EmploymentInformationViewModel);
-            // 
-            // employmentTypeOptionsBindingSource
-            // 
-            this.employmentTypeOptionsBindingSource.DataMember = "EmploymentTypeOptions";
-            this.employmentTypeOptionsBindingSource.DataSource = this.employmentInfoBindingSource;
             // 
             // EmploymentInformationView
             // 
@@ -368,13 +417,13 @@
             this.Size = new System.Drawing.Size(535, 150);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl10)).EndInit();
             this.layoutControl10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.statusIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeTypeLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentTypeOptionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nodeIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yearCountTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit1.Properties)).EndInit();
@@ -391,9 +440,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem64)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem63)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem66)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addDepartmentHyperLink.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentTypeOptionsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,5 +476,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.BindingSource employmentInfoBindingSource;
         private System.Windows.Forms.BindingSource employmentTypeOptionsBindingSource;
+        private DevExpress.XtraEditors.HyperLinkEdit addDepartmentHyperLink;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

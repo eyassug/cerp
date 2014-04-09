@@ -425,7 +425,6 @@
             this.toolStripButton31 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.xtraTabControl3 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage9 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainer18 = new System.Windows.Forms.SplitContainer();
@@ -639,15 +638,15 @@
             this.toolStripButton58 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton59 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton60 = new System.Windows.Forms.ToolStripButton();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem190 = new DevExpress.XtraLayout.LayoutControlItem();
             this.eduLevelRepoItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.educTypeRepoItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.depeTyperepoItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.skillTypeRepoItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.benefitTypeRepoItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.leaveTypeRepoItemLookUpEdit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.layoutControlItem190 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
             this.contactXtraTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -858,7 +857,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem74)).BeginInit();
             this.leaveToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
-            this.xtraTabControl2.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
             this.splitContainer10.Panel2.SuspendLayout();
@@ -1047,7 +1045,6 @@
             this.toolStrip8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl3)).BeginInit();
             this.xtraTabControl3.SuspendLayout();
             this.xtraTabPage9.SuspendLayout();
@@ -1260,13 +1257,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem188)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem189)).BeginInit();
             this.toolStrip15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem190)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eduLevelRepoItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.educTypeRepoItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depeTyperepoItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillTypeRepoItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benefitTypeRepoItemLookUpEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaveTypeRepoItemLookUpEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem190)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -3333,7 +3331,7 @@
             this.splitContainer9.Panel2.Controls.Add(this.layoutControl11);
             this.splitContainer9.Panel2.Controls.Add(this.leaveToolStrip);
             this.splitContainer9.Size = new System.Drawing.Size(0, 0);
-            this.splitContainer9.SplitterDistance = 516;
+            this.splitContainer9.SplitterDistance = 25;
             this.splitContainer9.TabIndex = 0;
             // 
             // layoutControl11
@@ -3348,7 +3346,7 @@
             this.layoutControl11.Location = new System.Drawing.Point(0, 25);
             this.layoutControl11.Name = "layoutControl11";
             this.layoutControl11.Root = this.layoutControlGroup11;
-            this.layoutControl11.Size = new System.Drawing.Size(559, 344);
+            this.layoutControl11.Size = new System.Drawing.Size(25, -25);
             this.layoutControl11.TabIndex = 1;
             this.layoutControl11.Text = "layoutControl11";
             // 
@@ -3356,7 +3354,7 @@
             // 
             this.remarkMemoEdit2.Location = new System.Drawing.Point(85, 108);
             this.remarkMemoEdit2.Name = "remarkMemoEdit2";
-            this.remarkMemoEdit2.Size = new System.Drawing.Size(462, 224);
+            this.remarkMemoEdit2.Size = new System.Drawing.Size(177, 16);
             this.remarkMemoEdit2.StyleController = this.layoutControl11;
             this.remarkMemoEdit2.TabIndex = 10;
             // 
@@ -3369,7 +3367,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.requestDateDateEdit.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.requestDateDateEdit.Size = new System.Drawing.Size(462, 20);
+            this.requestDateDateEdit.Size = new System.Drawing.Size(177, 20);
             this.requestDateDateEdit.StyleController = this.layoutControl11;
             this.requestDateDateEdit.TabIndex = 9;
             // 
@@ -3377,20 +3375,20 @@
             // 
             this.numDaysTextEdit.Location = new System.Drawing.Point(85, 60);
             this.numDaysTextEdit.Name = "numDaysTextEdit";
-            this.numDaysTextEdit.Size = new System.Drawing.Size(462, 20);
+            this.numDaysTextEdit.Size = new System.Drawing.Size(177, 20);
             this.numDaysTextEdit.StyleController = this.layoutControl11;
             this.numDaysTextEdit.TabIndex = 8;
             // 
             // toDateEdit
             // 
             this.toDateEdit.EditValue = null;
-            this.toDateEdit.Location = new System.Drawing.Point(353, 36);
+            this.toDateEdit.Location = new System.Drawing.Point(212, 36);
             this.toDateEdit.Name = "toDateEdit";
             this.toDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.toDateEdit.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.toDateEdit.Size = new System.Drawing.Size(194, 20);
+            this.toDateEdit.Size = new System.Drawing.Size(50, 20);
             this.toDateEdit.StyleController = this.layoutControl11;
             this.toDateEdit.TabIndex = 7;
             // 
@@ -3403,7 +3401,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.fromDateEdit.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.fromDateEdit.Size = new System.Drawing.Size(191, 20);
+            this.fromDateEdit.Size = new System.Drawing.Size(50, 20);
             this.fromDateEdit.StyleController = this.layoutControl11;
             this.fromDateEdit.TabIndex = 6;
             // 
@@ -3418,7 +3416,7 @@
             this.leaveTypeLookUpEdit.Properties.DisplayMember = "LeaveTypeName";
             this.leaveTypeLookUpEdit.Properties.NullText = "[Select Leave Type]";
             this.leaveTypeLookUpEdit.Properties.ValueMember = "LeaveTypeId";
-            this.leaveTypeLookUpEdit.Size = new System.Drawing.Size(462, 20);
+            this.leaveTypeLookUpEdit.Size = new System.Drawing.Size(177, 20);
             this.leaveTypeLookUpEdit.StyleController = this.layoutControl11;
             this.leaveTypeLookUpEdit.TabIndex = 5;
             // 
@@ -3436,7 +3434,7 @@
             this.layoutControlItem74});
             this.layoutControlGroup11.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup11.Name = "layoutControlGroup11";
-            this.layoutControlGroup11.Size = new System.Drawing.Size(559, 344);
+            this.layoutControlGroup11.Size = new System.Drawing.Size(274, 136);
             this.layoutControlGroup11.Text = "layoutControlGroup11";
             this.layoutControlGroup11.TextVisible = false;
             // 
@@ -3446,7 +3444,7 @@
             this.layoutControlItem69.CustomizationFormText = "Leave Type:";
             this.layoutControlItem69.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem69.Name = "layoutControlItem69";
-            this.layoutControlItem69.Size = new System.Drawing.Size(539, 24);
+            this.layoutControlItem69.Size = new System.Drawing.Size(254, 24);
             this.layoutControlItem69.Text = "Leave Type:";
             this.layoutControlItem69.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -3456,7 +3454,7 @@
             this.layoutControlItem70.CustomizationFormText = "From:";
             this.layoutControlItem70.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem70.Name = "layoutControlItem70";
-            this.layoutControlItem70.Size = new System.Drawing.Size(268, 24);
+            this.layoutControlItem70.Size = new System.Drawing.Size(127, 24);
             this.layoutControlItem70.Text = "From:";
             this.layoutControlItem70.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -3464,9 +3462,9 @@
             // 
             this.layoutControlItem71.Control = this.toDateEdit;
             this.layoutControlItem71.CustomizationFormText = "To:";
-            this.layoutControlItem71.Location = new System.Drawing.Point(268, 24);
+            this.layoutControlItem71.Location = new System.Drawing.Point(127, 24);
             this.layoutControlItem71.Name = "layoutControlItem71";
-            this.layoutControlItem71.Size = new System.Drawing.Size(271, 24);
+            this.layoutControlItem71.Size = new System.Drawing.Size(127, 24);
             this.layoutControlItem71.Text = "To:";
             this.layoutControlItem71.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -3476,7 +3474,7 @@
             this.layoutControlItem72.CustomizationFormText = "Num Days:";
             this.layoutControlItem72.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem72.Name = "layoutControlItem72";
-            this.layoutControlItem72.Size = new System.Drawing.Size(539, 24);
+            this.layoutControlItem72.Size = new System.Drawing.Size(254, 24);
             this.layoutControlItem72.Text = "Number Days:";
             this.layoutControlItem72.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -3486,7 +3484,7 @@
             this.layoutControlItem73.CustomizationFormText = "Request Date:";
             this.layoutControlItem73.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem73.Name = "layoutControlItem73";
-            this.layoutControlItem73.Size = new System.Drawing.Size(539, 24);
+            this.layoutControlItem73.Size = new System.Drawing.Size(254, 24);
             this.layoutControlItem73.Text = "Request Date:";
             this.layoutControlItem73.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -3496,7 +3494,7 @@
             this.layoutControlItem74.CustomizationFormText = "Remark:";
             this.layoutControlItem74.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem74.Name = "layoutControlItem74";
-            this.layoutControlItem74.Size = new System.Drawing.Size(539, 228);
+            this.layoutControlItem74.Size = new System.Drawing.Size(254, 20);
             this.layoutControlItem74.Text = "Remark:";
             this.layoutControlItem74.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -3509,7 +3507,7 @@
             this.btnDeleteLeave});
             this.leaveToolStrip.Location = new System.Drawing.Point(0, 0);
             this.leaveToolStrip.Name = "leaveToolStrip";
-            this.leaveToolStrip.Size = new System.Drawing.Size(559, 25);
+            this.leaveToolStrip.Size = new System.Drawing.Size(25, 25);
             this.leaveToolStrip.TabIndex = 0;
             this.leaveToolStrip.Text = "toolStrip1";
             // 
@@ -5613,19 +5611,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(951, 452);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem190});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(951, 452);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
-            this.layoutControlGroup1.TextVisible = false;
             // 
             // xtraTabControl3
             // 
@@ -7939,6 +7924,31 @@
             this.toolStripButton60.Text = "toolStripButton2";
             this.toolStripButton60.ToolTipText = "Delete";
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem190});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(951, 452);
+            this.layoutControlGroup1.Text = "layoutControlGroup1";
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem190
+            // 
+            this.layoutControlItem190.Control = this.xtraTabControl3;
+            this.layoutControlItem190.CustomizationFormText = "layoutControlItem190";
+            this.layoutControlItem190.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem190.Name = "layoutControlItem190";
+            this.layoutControlItem190.Size = new System.Drawing.Size(931, 432);
+            this.layoutControlItem190.Text = "layoutControlItem190";
+            this.layoutControlItem190.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem190.TextToControlDistance = 0;
+            this.layoutControlItem190.TextVisible = false;
+            // 
             // eduLevelRepoItemLookUpEdit
             // 
             this.eduLevelRepoItemLookUpEdit.AutoHeight = false;
@@ -7993,18 +8003,6 @@
             this.leaveTypeRepoItemLookUpEdit.Name = "leaveTypeRepoItemLookUpEdit";
             this.leaveTypeRepoItemLookUpEdit.ValueMember = "LeaveTypeId";
             // 
-            // layoutControlItem190
-            // 
-            this.layoutControlItem190.Control = this.xtraTabControl3;
-            this.layoutControlItem190.CustomizationFormText = "layoutControlItem190";
-            this.layoutControlItem190.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem190.Name = "layoutControlItem190";
-            this.layoutControlItem190.Size = new System.Drawing.Size(931, 432);
-            this.layoutControlItem190.Text = "layoutControlItem190";
-            this.layoutControlItem190.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem190.TextToControlDistance = 0;
-            this.layoutControlItem190.TextVisible = false;
-            // 
             // EmployeeDetailView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8013,7 +8011,6 @@
             this.Name = "EmployeeDetailView";
             this.Size = new System.Drawing.Size(951, 452);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
             this.contactXtraTabPage.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -8240,7 +8237,6 @@
             this.leaveToolStrip.ResumeLayout(false);
             this.leaveToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
-            this.xtraTabControl2.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.splitContainer10.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
@@ -8443,7 +8439,6 @@
             this.toolStrip8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl3)).EndInit();
             this.xtraTabControl3.ResumeLayout(false);
             this.xtraTabPage9.ResumeLayout(false);
@@ -8674,13 +8669,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem189)).EndInit();
             this.toolStrip15.ResumeLayout(false);
             this.toolStrip15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem190)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eduLevelRepoItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.educTypeRepoItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depeTyperepoItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skillTypeRepoItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.benefitTypeRepoItemLookUpEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaveTypeRepoItemLookUpEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem190)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -199,7 +199,7 @@
             this.maritalStatusOptionsLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.maritalStatusOptionsLookupEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DisplayMember", "Display Member", 85, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DisplayMember", "", 85, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.maritalStatusOptionsLookupEdit.Properties.DataSource = this.maritalStatusListBindingSource;
             this.maritalStatusOptionsLookupEdit.Properties.DisplayMember = "DisplayMember";
             this.maritalStatusOptionsLookupEdit.Properties.ValueMember = "ValueMember";
@@ -213,7 +213,7 @@
             this.sexOptionsLookupEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.sexOptionsLookupEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DisplayMember", "Display Member", 85, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DisplayMember", "", 85, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.sexOptionsLookupEdit.Properties.DataSource = this.sexOptionsBindingSource;
             this.sexOptionsLookupEdit.Properties.DisplayMember = "DisplayMember";
             this.sexOptionsLookupEdit.Properties.ValueMember = "ValueMember";

@@ -32,6 +32,7 @@
             CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.PersonalInformationViewModel personalInformationViewModel1 = new CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.PersonalInformationViewModel();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.employeeDetailView = new CERP.Modules.HumanResources.Controls.EmployeeManagement.Views.EmployeeDetailView();
             this.employmentInformationView = new CERP.Modules.HumanResources.Controls.EmployeeManagement.Views.EmploymentInformationView();
             this.employeePersonalInformationView = new CERP.Modules.HumanResources.Controls.EmployeeManagement.Views.EmployeePersonalInformationView();
@@ -41,6 +42,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -55,7 +57,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(987, 432);
+            this.layoutControl1.Size = new System.Drawing.Size(987, 507);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -67,19 +69,33 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.emptySpaceItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(987, 432);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(987, 507);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 196);
+            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(0, 10);
+            this.emptySpaceItem1.MinSize = new System.Drawing.Size(10, 10);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(967, 10);
+            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // employeeDetailView
             // 
             this.employeeDetailView.Enabled = false;
-            this.employeeDetailView.Location = new System.Drawing.Point(12, 208);
+            this.employeeDetailView.Location = new System.Drawing.Point(12, 218);
             this.employeeDetailView.Name = "employeeDetailView";
-            this.employeeDetailView.Size = new System.Drawing.Size(963, 212);
+            this.employeeDetailView.Size = new System.Drawing.Size(963, 277);
             this.employeeDetailView.TabIndex = 6;
             // 
             // employmentInformationView
@@ -114,6 +130,7 @@
             personalInformationViewModel1.Nationality = null;
             personalInformationViewModel1.NationalityOptions = null;
             personalInformationViewModel1.Remark = null;
+            personalInformationViewModel1.Sex = null;
             this.employeePersonalInformationView.PersonalInformation = personalInformationViewModel1;
             this.employeePersonalInformationView.Size = new System.Drawing.Size(656, 192);
             this.employeePersonalInformationView.TabIndex = 4;
@@ -149,9 +166,9 @@
             // 
             this.layoutControlItem3.Control = this.employeeDetailView;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 196);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 206);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(967, 216);
+            this.layoutControlItem3.Size = new System.Drawing.Size(967, 281);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -161,13 +178,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 432);
+            this.ClientSize = new System.Drawing.Size(987, 507);
             this.Controls.Add(this.layoutControl1);
             this.Name = "AddEmployeeShell";
             this.Text = "New Employee";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -185,5 +203,6 @@
         private Views.EmploymentInformationView employmentInformationView;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }
