@@ -10,19 +10,21 @@ namespace CERP.Modules.HumanResources.EmailConsole
     public partial class PaySlip : DevExpress.XtraReports.UI.XtraReport
     {
         public PaySlip()
+            : this(new PaySlipModel())
+        {
+            
+        }
+
+        public PaySlip(PaySlipModel paySlipModel)
         {
             InitializeComponent();
-            LoadReport();
+            PaySlipInformation = paySlipModel;
         }
-        public void LoadReport ()
+
+        public PaySlipModel PaySlipInformation
         {
-            var model = new PaySlipModel();
-            model.CompanyName = "AA";
-            model.EmployeeName = "Eyassu";
-            model.GrossIncome = 15000;
-            model.IncomeTax = 2000;
-            model.NetPay = 10000;
-            bindingSource.DataSource = model;
+            get { return bindingSource.DataSource as PaySlipModel; }
+            set { bindingSource.DataSource = value; }
         }
     }
 }
