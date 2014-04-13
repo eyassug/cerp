@@ -9,23 +9,14 @@ namespace CERP.Models.HumanResources
     [Table("WagePayment", Schema = "HumanResources")]
     public class WagePayment
     {
-        private byte _payFrequency;
-
         [Key]
         public int WagePaymentID { get; set; }
+        [Column("Period")]
         public string PeriodName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public byte PayFrequency
-        {
-            get { return _payFrequency; }
-            set
-            {
-                if(value != 1 || value != 2)
-                    throw new ArgumentOutOfRangeException("PayFrequency");
-                _payFrequency = value;
-            }
-        }
+        [Column("PayeePayFrequency")]
+        public byte PayFrequency { get; set; }
 
         [NotMapped]
         public PaymentFrequency PaymentFrequency

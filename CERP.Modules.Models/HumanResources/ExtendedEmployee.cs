@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CERP.Models.HumanResources
 {
     [Table("vEmployee", Schema = "HumanResources")]
-    public class EmployeeExtended
+    public class ExtendedEmployee
     {
         [Key]
         public int EmployeeID { get; set; }

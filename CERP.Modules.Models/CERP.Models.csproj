@@ -55,13 +55,16 @@
     <Compile Include="Business\Partner.cs" />
     <Compile Include="Business\PartnerType.cs" />
     <Compile Include="HumanResources\Department.cs" />
-    <Compile Include="HumanResources\EmployeeExtended.cs" />
+    <Compile Include="HumanResources\ExtendedEmployee.cs" />
     <Compile Include="HumanResources\Employee.cs" />
+    <Compile Include="HumanResources\EmployeePayHistory.cs" />
     <Compile Include="HumanResources\Gender.cs" />
     <Compile Include="HumanResources\MaritalStatus.cs" />
     <Compile Include="HumanResources\PaymentFrequency.cs" />
+    <Compile Include="HumanResources\PaySlipQueue.cs" />
     <Compile Include="HumanResources\WagePayment.cs" />
     <Compile Include="HumanResources\WagePaymentDetail.cs" />
+    <Compile Include="HumanResources\WagePaymentStatusHistory.cs" />
     <Compile Include="Inventory\Location.cs" />
     <Compile Include="Inventory\Batch.cs" />
     <Compile Include="Inventory\InventoryAccount.cs" />
