@@ -297,7 +297,7 @@
             this.layoutControlItem62.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem62.Name = "layoutControlItem62";
             this.layoutControlItem62.Size = new System.Drawing.Size(230, 24);
-            this.layoutControlItem62.Text = "Service Year:";
+            this.layoutControlItem62.Text = "Email Address:";
             this.layoutControlItem62.TextSize = new System.Drawing.Size(89, 13);
             // 
             // layoutControlItem61
@@ -327,7 +327,7 @@
             this.layoutControlItem63.Location = new System.Drawing.Point(230, 72);
             this.layoutControlItem63.Name = "layoutControlItem63";
             this.layoutControlItem63.Size = new System.Drawing.Size(240, 24);
-            this.layoutControlItem63.Text = "Status:";
+            this.layoutControlItem63.Text = "Payment Type:";
             this.layoutControlItem63.TextSize = new System.Drawing.Size(89, 13);
             // 
             // layoutControlItem66
