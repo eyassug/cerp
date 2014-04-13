@@ -83,32 +83,67 @@ namespace CERP.Modules.HumanResources.Services
 
         public void Add(Employee employee)
         {
-            throw new NotImplementedException();
+            using(var context = new CERPContext())
+            {
+                
+            }
         }
 
         public void Remove(Domain.Employee employee)
         {
-            throw new NotImplementedException();
+            using (var context = new CERPContext())
+            {
+
+            }
         }
 
-        public void ChangeDepartment(Domain.Employee employee, Domain.Department newDepartment)
+        public void ChangeDepartment(Employee employee, Department newDepartment)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateSalary(Domain.Employee employee, decimal newSalary)
+        public void UpdateSalary(Employee employee, decimal newSalary)
         {
-            throw new NotImplementedException();
+            using (var context = new CERPContext())
+            {
+
+            }
         }
 
-        public void ChangePaymentFrequency(Domain.Employee employee, Models.HumanResources.PaymentFrequency paymentFrequency)
+        public void ChangePaymentFrequency(Employee employee, Models.HumanResources.PaymentFrequency paymentFrequency)
         {
-            throw new NotImplementedException();
+            using (var context = new CERPContext())
+            {
+                var payHistory = new Models.HumanResources.EmployeePayHistory
+                                     {
+                                         EmployeeID = employee.EmployeeID,
+                                         
+                                     };
+            }
         }
 
-        public void GetEmployees(Domain.Department department)
+        public ICollection<Employee> GetEmployees(Department department)
         {
-            throw new NotImplementedException();
+            using (var context = new CERPContext())
+            {
+                var employees = from employee in context.ExtendedEmployees.Where(e => e.IsCurrent && e.DepartmentID == department.DepartmentID)
+                                select new Employee
+                                {
+                                    EmployeeID = employee.EmployeeID,
+                                    FirstName = employee.FirstName,
+                                    MiddleName = employee.MiddleName,
+                                    LastName = employee.LastName,
+                                    Department = _departmentService.GetDepartment(employee.DepartmentID),
+                                    DateOfBirth = employee.DateOfBirth.Date,
+                                    Salary = employee.Rate,
+                                    PaymentFrequency = employee.PaymentFrequency,
+                                    Gender = employee.Gender,
+                                    EmailAddress = employee.EmailAddress,
+                                    MaritalStatus = employee.Status.GetValueOrDefault(),
+                                    JobTitle = employee.JobTitle
+                                };
+                return employees.ToList();
+            }
         }
     
 }
