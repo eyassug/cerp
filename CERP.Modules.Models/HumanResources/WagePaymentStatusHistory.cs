@@ -10,7 +10,7 @@ namespace CERP.Models.HumanResources
         [Key]
         public int WagePaymentStatusHistoryID { get; set; }
         [ForeignKey("WagePayment")]
-        public string WagePaymentID { get; set; }
+        public int WagePaymentID { get; set; }
         public string WagePaymentStatusCode { get; set; }
         public DateTime? StatusChangedDate { get; set; }
 

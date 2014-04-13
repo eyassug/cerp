@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CERP.Models.HumanResources
@@ -7,7 +8,7 @@ namespace CERP.Models.HumanResources
     public class Department
     {
         [Key]
-        public int DepartmentID { get; set; }
+        public Int16 DepartmentID { get; set; }
         public string Name { get; set; }
         public string DepartmentCode { get; set; }
     }

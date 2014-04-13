@@ -55,6 +55,7 @@
     <Compile Include="Business\Partner.cs" />
     <Compile Include="Business\PartnerType.cs" />
     <Compile Include="HumanResources\Department.cs" />
+    <Compile Include="HumanResources\EmployeeDepartmentHistory.cs" />
     <Compile Include="HumanResources\ExtendedEmployee.cs" />
     <Compile Include="HumanResources\Employee.cs" />
     <Compile Include="HumanResources\EmployeePayHistory.cs" />
