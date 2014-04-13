@@ -1,10 +1,16 @@
 ﻿using System;
+using CERP.Modules.HumanResources.Services;
 
 namespace CERP.Modules.HumanResources
 {
     public class HumanResourcesModule : Ninject.Modules.NinjectModule
     {
-        private readonly HumanResourcesModuleConfiguration _configuration;
+        private static HumanResourcesModuleConfiguration _configuration;
+
+        internal static string ConnectionString
+        {
+            get { return _configuration.ConnectionString; }
+        }
 
         public HumanResourcesModule(HumanResourcesModuleConfiguration configuration)
         {
@@ -15,7 +21,9 @@ namespace CERP.Modules.HumanResources
 
         public override void Load()
         {
-            throw new System.NotImplementedException();
+            Bind<IEmployeeService>().To<EmployeeService>();
+            Bind<IDepartmentService>().To<DepartmentService>();
+            Bind<IPayrollService>().To<PayrollService>();
         }
     }
 }
