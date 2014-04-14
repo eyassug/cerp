@@ -3,7 +3,7 @@ using CERP.Modules.HumanResources.Domain;
 
 namespace CERP.Modules.HumanResources
 {
-    interface IDepartmentService
+    public interface IDepartmentService
     {
         void Add(string departmentName, string departmentCode);
         Department GetDepartment(int departmentID);

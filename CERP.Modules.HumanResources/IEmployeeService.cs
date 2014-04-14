@@ -53,6 +53,6 @@ namespace CERP.Modules.HumanResources
         /// Returns all employees in the given department
         /// </summary>
         /// <param name="department"></param>
-        void GetEmployees(Department department);
+        ICollection<Employee> GetEmployees(Department department);
     }
 }
