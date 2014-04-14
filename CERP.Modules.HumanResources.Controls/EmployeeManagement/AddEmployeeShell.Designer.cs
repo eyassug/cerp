@@ -28,29 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.EmploymentInformationViewModel employmentInformationViewModel2 = new CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.EmploymentInformationViewModel();
             CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.PersonalInformationViewModel personalInformationViewModel2 = new CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.PersonalInformationViewModel();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.btnSaveEmployee = new DevExpress.XtraEditors.SimpleButton();
             this.employeeDetailView = new CERP.Modules.HumanResources.Controls.EmployeeManagement.Views.EmployeeDetailView();
             this.employmentInformationView = new CERP.Modules.HumanResources.Controls.EmployeeManagement.Views.EmploymentInformationView();
             this.employeePersonalInformationView = new CERP.Modules.HumanResources.Controls.EmployeeManagement.Views.EmployeePersonalInformationView();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSaveEmployee = new DevExpress.XtraEditors.SimpleButton();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -67,36 +70,15 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // layoutControlGroup1
+            // btnSaveEmployee
             // 
-            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.emptySpaceItem1,
-            this.layoutControlItem4,
-            this.emptySpaceItem2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(987, 507);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 196);
-            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(0, 10);
-            this.emptySpaceItem1.MinSize = new System.Drawing.Size(10, 10);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(967, 10);
-            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.btnSaveEmployee.Location = new System.Drawing.Point(897, 473);
+            this.btnSaveEmployee.Name = "btnSaveEmployee";
+            this.btnSaveEmployee.Size = new System.Drawing.Size(78, 22);
+            this.btnSaveEmployee.StyleController = this.layoutControl1;
+            this.btnSaveEmployee.TabIndex = 7;
+            this.btnSaveEmployee.Text = "Save";
+            this.btnSaveEmployee.Click += new System.EventHandler(this.BtnSaveEmployeeClick);
             // 
             // employeeDetailView
             // 
@@ -112,14 +94,17 @@
             employmentInformationViewModel2.CurrencyOptions = null;
             employmentInformationViewModel2.Department = null;
             employmentInformationViewModel2.DepartmentOptions = null;
+            employmentInformationViewModel2.EmailAddress = null;
             employmentInformationViewModel2.EmployeeNumber = null;
             employmentInformationViewModel2.EmploymentType = "Local";
             employmentInformationViewModel2.HireDate = new System.DateTime(((long)(0)));
+            employmentInformationViewModel2.JobTitle = null;
             employmentInformationViewModel2.Salary = new decimal(new int[] {
             0,
             0,
             0,
             0});
+            employmentInformationViewModel2.SelectedDepartmentID = 0;
             this.employmentInformationView.EmploymentInformation = employmentInformationViewModel2;
             this.employmentInformationView.Location = new System.Drawing.Point(672, 12);
             this.employmentInformationView.Name = "employmentInformationView";
@@ -142,6 +127,24 @@
             this.employeePersonalInformationView.PersonalInformation = personalInformationViewModel2;
             this.employeePersonalInformationView.Size = new System.Drawing.Size(656, 192);
             this.employeePersonalInformationView.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.emptySpaceItem1,
+            this.layoutControlItem4,
+            this.emptySpaceItem2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(987, 507);
+            this.layoutControlGroup1.Text = "layoutControlGroup1";
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -182,15 +185,18 @@
             this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
             // 
-            // btnSaveEmployee
+            // emptySpaceItem1
             // 
-            this.btnSaveEmployee.Location = new System.Drawing.Point(897, 473);
-            this.btnSaveEmployee.Name = "btnSaveEmployee";
-            this.btnSaveEmployee.Size = new System.Drawing.Size(78, 22);
-            this.btnSaveEmployee.StyleController = this.layoutControl1;
-            this.btnSaveEmployee.TabIndex = 7;
-            this.btnSaveEmployee.Text = "Save";
-            this.btnSaveEmployee.Click += new System.EventHandler(this.BtnSaveEmployeeClick);
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 196);
+            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(0, 10);
+            this.emptySpaceItem1.MinSize = new System.Drawing.Size(10, 10);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(967, 10);
+            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem1.Text = "emptySpaceItem1";
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
@@ -217,6 +223,10 @@
             this.emptySpaceItem2.Text = "emptySpaceItem2";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.AddEmployeeViewModel);
+            // 
             // AddEmployeeShell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,12 +238,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,5 +263,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSaveEmployee;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
     }
 }

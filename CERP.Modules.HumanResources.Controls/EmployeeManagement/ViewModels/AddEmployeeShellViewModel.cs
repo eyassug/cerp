@@ -2,7 +2,19 @@
 {
     public class AddEmployeeViewModel
     {
-        public PersonalInformationViewModel PersonalInformation { get; set; }
-        public EmploymentInformationViewModel EmploymentInformation { get; set; }
+        private PersonalInformationViewModel _personalInformation;
+        private EmploymentInformationViewModel _employmentInformation;
+
+        public PersonalInformationViewModel PersonalInformation
+        {
+            get { return _personalInformation ?? (_personalInformation = new PersonalInformationViewModel()); }
+            set { _personalInformation = value; }
+        }
+
+        public EmploymentInformationViewModel EmploymentInformation
+        {
+            get { return _employmentInformation ?? (_employmentInformation = new EmploymentInformationViewModel()); }
+            set { _employmentInformation = value; }
+        }
     }
 }
