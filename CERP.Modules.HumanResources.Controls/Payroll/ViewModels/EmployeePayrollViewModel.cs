@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CERP.Modules.HumanResources.Controls.Payroll.ViewModels
+﻿namespace CERP.Modules.HumanResources.Controls.Payroll.ViewModels
 {
     public class EmployeePayrollViewModel
     {
@@ -14,6 +8,6 @@ namespace CERP.Modules.HumanResources.Controls.Payroll.ViewModels
         public decimal ProvidentFund { get; set; }
         public decimal IncomeTax { get; set; }
         public decimal PensionDeduction { get; set; }
-        public decimal LoadDeduction { get; set; }
+        public decimal LoanDeduction { get; set; }
     }
 }
