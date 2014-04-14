@@ -99,6 +99,12 @@
     <Compile Include="EmployeeManagement\Views\EmploymentInformationView.Designer.cs">
       <DependentUpon>EmploymentInformationView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payroll\NewPayrollShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\NewPayrollShell.Designer.cs">
+      <DependentUpon>NewPayrollShell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payroll\Reports\PaySlip.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <EmbeddedResource Include="EmployeeManagement\Views\EmploymentInformationView.resx">
       <DependentUpon>EmploymentInformationView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\NewPayrollShell.resx">
+      <DependentUpon>NewPayrollShell.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payroll\Reports\PaySlip.resx">
       <DependentUpon>PaySlip.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,9 +174,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Properties\DataSources\CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.AddEmployeeViewModel.datasource" />
     <None Include="Properties\DataSources\CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.LookUpViewModel.datasource" />
     <None Include="Properties\DataSources\CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.PersonalInformationViewModel.datasource" />
     <None Include="Properties\DataSources\CERP.Modules.HumanResources.Controls.Payroll.ViewModels.EmployeePayrollViewModel.datasource" />
+    <None Include="Properties\DataSources\CERP.Modules.HumanResources.Controls.Payroll.ViewModels.PayrollInformationViewModel.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
