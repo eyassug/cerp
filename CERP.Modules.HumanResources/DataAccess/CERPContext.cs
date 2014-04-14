@@ -13,7 +13,7 @@ namespace CERP.Modules.HumanResources.DataAccess
         public DbSet<Models.HumanResources.Department> Departments { get; set; }
         public DbSet<Models.HumanResources.ExtendedEmployee> ExtendedEmployees { get; set; }
         public DbSet<Models.HumanResources.WagePayment> WagePayments { get; set; }
-        public DbSet<Models.HumanResources.WagePayment> WagePaymentDetails { get; set; }
+        public DbSet<Models.HumanResources.WagePaymentDetail> WagePaymentDetails { get; set; }
         public DbSet<Models.HumanResources.WagePaymentStatusHistory> WagePaymentStatusHistory { get; set; }
         
     }

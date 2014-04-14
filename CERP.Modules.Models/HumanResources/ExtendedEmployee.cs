@@ -42,7 +42,7 @@ namespace CERP.Models.HumanResources
         [Column("HireDate")]
         public DateTime DateOfHire { get; set; }
 
-        public int DepartmentID { get; set; }
+        public Int16 DepartmentID { get; set; }
         public decimal Rate { get; set; }
         public byte PayFrequency { get; set; }
         public Guid? Rowguid { get; set; }

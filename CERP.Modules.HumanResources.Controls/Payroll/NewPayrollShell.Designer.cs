@@ -94,7 +94,6 @@
             // 
             this.payrollHeaderView.Location = new System.Drawing.Point(12, 12);
             this.payrollHeaderView.Name = "payrollHeaderView";
-            this.payrollHeaderView.PayrollInformation = null;
             this.payrollHeaderView.Size = new System.Drawing.Size(839, 95);
             this.payrollHeaderView.TabIndex = 5;
             this.payrollHeaderView.CreatePayrollClick += new System.EventHandler(this.PayrollHeaderViewCreatePayrollClick);

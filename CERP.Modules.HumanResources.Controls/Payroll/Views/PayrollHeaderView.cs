@@ -16,11 +16,6 @@ namespace CERP.Modules.HumanResources.Controls.Payroll.Views
         public PayrollHeaderView()
         {
             InitializeComponent();
-            PayrollInformation = new PayrollInformationViewModel
-                                     {
-                                         StartDate = DateTime.Today,
-                                         EndDate = DateTime.Today
-                                     };
         }
 
         private void BtnCreateClick(object sender, EventArgs e)
@@ -32,16 +27,28 @@ namespace CERP.Modules.HumanResources.Controls.Payroll.Views
         {
             var handler = CreatePayrollClick;
             if (handler != null)
-                handler(PayrollInformation, null);
+                handler(this, new EventArgs());
         }
 
         public event EventHandler CreatePayrollClick;
 
-        public PayrollInformationViewModel PayrollInformation
+        public DateTime? StartDate
         {
-            get { return payrollHeaderBindingSource.DataSource as PayrollInformationViewModel; }
-            set { payrollHeaderBindingSource.DataSource = value; }
-            
+            get { return dtpStartDate.EditValue as DateTime?; }
+            set { dtpStartDate.EditValue = value; }
         }
+
+        public DateTime? EndDate
+        {
+            get { return dtpEndDate.EditValue as DateTime?; }
+            set { dtpEndDate.EditValue = value; }
+        }
+
+        public string PeriodName
+        {
+            get { return txtPeriodName.Text; }
+            set { txtPeriodName.Text = value; }
+        }
+
     }
 }

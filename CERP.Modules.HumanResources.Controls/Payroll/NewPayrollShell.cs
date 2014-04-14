@@ -24,15 +24,12 @@ namespace CERP.Modules.HumanResources.Controls.Payroll
 
         private void PayrollHeaderViewCreatePayrollClick(object sender, EventArgs e)
         {
-            var payrollInfo = payrollHeaderView.PayrollInformation;
-            if (payrollInfo == null)
-                XtraMessageBox.Show("Invalid Payroll Header");
-            LoadGrid(payrollInfo);
+            LoadGrid();
         }
 
-        private void LoadGrid(PayrollInformationViewModel payrollInfo)
+        private void LoadGrid()
         {
-            var payroll = _payrollService.CreateNew(payrollInfo.Period, payrollInfo.StartDate, payrollInfo.EndDate);
+            var payroll = _payrollService.CreateNew(payrollHeaderView.PeriodName, payrollHeaderView.StartDate.GetValueOrDefault(), payrollHeaderView.EndDate.GetValueOrDefault());
             var gridDetails = from p in payroll.PayrollDetails
                               select new EmployeePayrollViewModel
                                          {

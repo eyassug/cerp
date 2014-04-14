@@ -34,7 +34,6 @@
             this.dtpEndDate = new DevExpress.XtraEditors.DateEdit();
             this.dtpStartDate = new DevExpress.XtraEditors.DateEdit();
             this.txtPeriodName = new DevExpress.XtraEditors.TextEdit();
-            this.payrollHeaderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -44,6 +43,7 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.payrollHeaderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpEndDate.Properties.VistaTimeProperties)).BeginInit();
@@ -51,7 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpStartDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpStartDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeriodName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.payrollHeaderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -61,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.payrollHeaderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -122,12 +122,9 @@
             this.txtPeriodName.StyleController = this.layoutControl1;
             this.txtPeriodName.TabIndex = 5;
             // 
-            // payrollHeaderBindingSource
-            // 
-            this.payrollHeaderBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.Payroll.ViewModels.PayrollInformationViewModel);
-            // 
             // textEdit1
             // 
+            this.textEdit1.Enabled = false;
             this.textEdit1.Location = new System.Drawing.Point(414, 12);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(245, 20);
@@ -231,6 +228,10 @@
             this.layoutControlItem1.Text = "Created By";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(54, 13);
             // 
+            // payrollHeaderBindingSource
+            // 
+            this.payrollHeaderBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.Payroll.ViewModels.PayrollInformationViewModel);
+            // 
             // PayrollHeaderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +246,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpStartDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpStartDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeriodName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.payrollHeaderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -255,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.payrollHeaderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
