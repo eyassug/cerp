@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPayrollShell));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.payrollGridView = new CERP.Modules.HumanResources.Controls.Payroll.Views.PayrollGridView();
             this.payrollHeaderView = new CERP.Modules.HumanResources.Controls.Payroll.Views.PayrollHeaderView();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,26 @@
             this.layoutControl1.Size = new System.Drawing.Size(863, 316);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // payrollGridView
+            // 
+            this.payrollGridView.Location = new System.Drawing.Point(12, 121);
+            this.payrollGridView.Name = "payrollGridView";
+            this.payrollGridView.Size = new System.Drawing.Size(839, 183);
+            this.payrollGridView.TabIndex = 6;
+            this.payrollGridView.PayrollConfirmed += new System.EventHandler(this.PayrollConfirmed);
+            this.payrollGridView.Load += new System.EventHandler(this.PayrollGridViewLoad);
+            // 
+            // payrollHeaderView
+            // 
+            this.payrollHeaderView.EndDate = null;
+            this.payrollHeaderView.Location = new System.Drawing.Point(12, 12);
+            this.payrollHeaderView.Name = "payrollHeaderView";
+            this.payrollHeaderView.PeriodName = "";
+            this.payrollHeaderView.Size = new System.Drawing.Size(839, 95);
+            this.payrollHeaderView.StartDate = null;
+            this.payrollHeaderView.TabIndex = 5;
+            this.payrollHeaderView.CreatePayrollClick += new System.EventHandler(this.PayrollHeaderViewCreatePayrollClick);
             // 
             // layoutControlGroup1
             // 
@@ -70,6 +91,18 @@
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.payrollHeaderView;
+            this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(843, 99);
+            this.layoutControlItem2.Text = "layoutControlItem2";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextToControlDistance = 0;
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
@@ -82,33 +115,6 @@
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // payrollGridView
-            // 
-            this.payrollGridView.Location = new System.Drawing.Point(12, 121);
-            this.payrollGridView.Name = "payrollGridView";
-            this.payrollGridView.Size = new System.Drawing.Size(839, 183);
-            this.payrollGridView.TabIndex = 6;
-            // 
-            // payrollHeaderView
-            // 
-            this.payrollHeaderView.Location = new System.Drawing.Point(12, 12);
-            this.payrollHeaderView.Name = "payrollHeaderView";
-            this.payrollHeaderView.Size = new System.Drawing.Size(839, 95);
-            this.payrollHeaderView.TabIndex = 5;
-            this.payrollHeaderView.CreatePayrollClick += new System.EventHandler(this.PayrollHeaderViewCreatePayrollClick);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.payrollHeaderView;
-            this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(843, 99);
-            this.layoutControlItem2.Text = "layoutControlItem2";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextToControlDistance = 0;
-            this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -133,8 +139,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 

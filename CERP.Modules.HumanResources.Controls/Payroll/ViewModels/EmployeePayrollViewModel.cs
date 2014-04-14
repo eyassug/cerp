@@ -2,6 +2,7 @@
 {
     public class EmployeePayrollViewModel
     {
+        public int EmployeeID { get; set; }
         public string Name { get; set; }
         public string Department { get; set; }
         public decimal GrossSalary { get; set; }
