@@ -40,11 +40,21 @@ namespace CERP.Modules.HumanResources.EmailConsole
 
         static void Main(string[] args)
         {
+            while (true)
+            {
+                CheckForAndSendQueuedSlips();
+                Thread.Sleep(TimeSpan.FromSeconds(30));
+            }
+            
+        }
+
+        static void CheckForAndSendQueuedSlips()
+        {
             // Clear temp directory
             ClearTempDirectory();
 
             var queuedPaySlips = _paySlipMailService.GetQueuedPaySlips();
-            while(queuedPaySlips.Any())
+            while (queuedPaySlips.Any())
             {
                 var slip = queuedPaySlips.Peek();
                 try
@@ -57,7 +67,6 @@ namespace CERP.Modules.HumanResources.EmailConsole
                     Thread.Sleep(TimeSpan.FromSeconds(30));
                 }
             }
-            
         }
 
         static void ClearTempDirectory()
