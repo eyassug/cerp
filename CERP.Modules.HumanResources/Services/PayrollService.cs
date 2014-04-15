@@ -9,13 +9,13 @@ namespace CERP.Modules.HumanResources.Services
 {
     public class PayrollService : IPayrollService
     {
-        private IEmployeeService _employeeService;
+        private readonly IEmployeeService _employeeService = new EmployeeService();
         public Payroll CreateNew(string periodName, DateTime startDate, DateTime endDate, Models.HumanResources.PaymentFrequency paymentFrequency)
         {
             using (var context = new CERPContext())
             {
                 var payFrequency = (byte) paymentFrequency;
-                var payment = context.WagePayments.Any(m => (m.StartDate.Date == startDate.Date && m.EndDate.Date == endDate.Date) || (m.StartDate.Date == startDate.Date && m.PayFrequency == payFrequency) || (m.EndDate.Date == endDate.Date && m.PayFrequency == payFrequency));
+                var payment = context.WagePayments.ToList().Any(m => (m.StartDate.Date == startDate.Date && m.EndDate.Date == endDate.Date) || (m.StartDate.Date == startDate.Date && m.PayFrequency == payFrequency) || (m.EndDate.Date == endDate.Date && m.PayFrequency == payFrequency));
                 if(payment)
                     throw new ArgumentException("A payment with the supplied parameters already exists");
                 var payroll = new Payroll
@@ -71,7 +71,7 @@ namespace CERP.Modules.HumanResources.Services
                 context.WagePayments.Add(newWagePayment);
                 context.WagePaymentStatusHistory.Add(wagePaymentStatus);
                 context.SaveChanges();
-
+                payroll.PayrollID = newWagePayment.WagePaymentID;
             }
         }
 
@@ -97,6 +97,7 @@ namespace CERP.Modules.HumanResources.Services
 
         public void ConfirmPayment(Payroll payroll)
         {
+            AddDraft(payroll);
             using (var context = new CERPContext())
             {
                 var wagePayment = context.WagePayments.SingleOrDefault(w => w.WagePaymentID == payroll.PayrollID);
@@ -107,10 +108,23 @@ namespace CERP.Modules.HumanResources.Services
                 var wagePaymentStatus = new WagePaymentStatusHistory
                 {
                     WagePayment = wagePayment,
-                    WagePaymentStatusCode = "CNCL",
+                    WagePaymentStatusCode = "CNFRM",
                     StatusChangedDate = DateTime.Now
                 };
                 context.WagePaymentStatusHistory.Add(wagePaymentStatus);
+
+                // Queue Payslip
+                foreach (var wagePaymentDetail in wagePayment.WagePaymentDetails)
+                {
+                    var payslipQueue = new PaySlipQueue
+                                           {
+                                               EmployeeID = wagePaymentDetail.EmployeeID,
+                                               WagePaymentID = wagePaymentDetail.WagePaymentID,
+                                               SentFlag = false,
+                                               QueuedDate = DateTime.Now
+                                           };
+                    context.PaySlipQueues.Add(payslipQueue);
+                }
                 context.SaveChanges();
             }
         }
