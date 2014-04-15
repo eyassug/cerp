@@ -121,6 +121,8 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels
         public List<string> NationalityOptions { get; set; }
         public string Remark { get; set; }
 
+
+        
     }
 
     public enum SexOptions

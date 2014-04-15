@@ -3517,7 +3517,7 @@
             this.btnNewLeave.Image = ((System.Drawing.Image)(resources.GetObject("btnNewLeave.Image")));
             this.btnNewLeave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNewLeave.Name = "btnNewLeave";
-            this.btnNewLeave.Size = new System.Drawing.Size(23, 22);
+            this.btnNewLeave.Size = new System.Drawing.Size(23, 20);
             this.btnNewLeave.Text = "&New";
             this.btnNewLeave.Click += new System.EventHandler(this.btnNewLeave_Click);
             // 
@@ -3528,7 +3528,7 @@
             this.btnSaveLeave.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveLeave.Image")));
             this.btnSaveLeave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSaveLeave.Name = "btnSaveLeave";
-            this.btnSaveLeave.Size = new System.Drawing.Size(23, 22);
+            this.btnSaveLeave.Size = new System.Drawing.Size(23, 20);
             this.btnSaveLeave.Text = "&Save";
             this.btnSaveLeave.Click += new System.EventHandler(this.btnSaveLeave_Click);
             // 
@@ -3538,7 +3538,7 @@
             this.btnCancelLeave.Enabled = false;
             this.btnCancelLeave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelLeave.Name = "btnCancelLeave";
-            this.btnCancelLeave.Size = new System.Drawing.Size(23, 22);
+            this.btnCancelLeave.Size = new System.Drawing.Size(23, 4);
             this.btnCancelLeave.Text = "toolStripButton1";
             this.btnCancelLeave.ToolTipText = "Cancel";
             this.btnCancelLeave.Click += new System.EventHandler(this.btnCancelLeave_Click);
@@ -3549,7 +3549,7 @@
             this.btnDeleteLeave.Enabled = false;
             this.btnDeleteLeave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDeleteLeave.Name = "btnDeleteLeave";
-            this.btnDeleteLeave.Size = new System.Drawing.Size(23, 22);
+            this.btnDeleteLeave.Size = new System.Drawing.Size(23, 4);
             this.btnDeleteLeave.Text = "toolStripButton2";
             this.btnDeleteLeave.ToolTipText = "Delete";
             this.btnDeleteLeave.Click += new System.EventHandler(this.btnDeleteLeave_Click);

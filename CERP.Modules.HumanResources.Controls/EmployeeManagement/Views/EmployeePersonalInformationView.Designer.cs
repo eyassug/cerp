@@ -40,7 +40,9 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.maritalStatusOptionsLookupEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.maritalStatusListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sexOptionsLookupEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.sexOptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nationalityIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.nationalityOptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.remarkMemoEdit = new DevExpress.XtraEditors.MemoEdit();
@@ -51,8 +53,6 @@
             this.firstNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sexOptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.maritalStatusListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nationalityLabel = new System.Windows.Forms.Label();
             sexLabel = new System.Windows.Forms.Label();
@@ -67,7 +67,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maritalStatusOptionsLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexOptionsLookupEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexOptionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nationalityIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nationalityOptionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkMemoEdit.Properties)).BeginInit();
@@ -79,8 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.firstNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexOptionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,7 +163,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(582, 199);
+            this.layoutControl1.Size = new System.Drawing.Size(663, 199);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -188,7 +188,7 @@
             this.groupControl1.Controls.Add(this.firstNameTextEdit);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(558, 175);
+            this.groupControl1.Size = new System.Drawing.Size(639, 175);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Personal Information";
             // 
@@ -206,6 +206,11 @@
             this.maritalStatusOptionsLookupEdit.Size = new System.Drawing.Size(150, 20);
             this.maritalStatusOptionsLookupEdit.TabIndex = 26;
             // 
+            // maritalStatusListBindingSource
+            // 
+            this.maritalStatusListBindingSource.DataMember = "MaritalStatusList";
+            this.maritalStatusListBindingSource.DataSource = this.personalInfoBindingSource;
+            // 
             // sexOptionsLookupEdit
             // 
             this.sexOptionsLookupEdit.Location = new System.Drawing.Point(223, 75);
@@ -219,6 +224,11 @@
             this.sexOptionsLookupEdit.Properties.ValueMember = "ValueMember";
             this.sexOptionsLookupEdit.Size = new System.Drawing.Size(156, 20);
             this.sexOptionsLookupEdit.TabIndex = 25;
+            // 
+            // sexOptionsBindingSource
+            // 
+            this.sexOptionsBindingSource.DataMember = "SexOptions";
+            this.sexOptionsBindingSource.DataSource = this.personalInfoBindingSource;
             // 
             // nationalityIdLookUpEdit
             // 
@@ -300,7 +310,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(582, 199);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(663, 199);
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -310,21 +320,11 @@
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(562, 179);
+            this.layoutControlItem1.Size = new System.Drawing.Size(643, 179);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // sexOptionsBindingSource
-            // 
-            this.sexOptionsBindingSource.DataMember = "SexOptions";
-            this.sexOptionsBindingSource.DataSource = this.personalInfoBindingSource;
-            // 
-            // maritalStatusListBindingSource
-            // 
-            this.maritalStatusListBindingSource.DataMember = "MaritalStatusList";
-            this.maritalStatusListBindingSource.DataSource = this.personalInfoBindingSource;
             // 
             // personalInfoBindingSource
             // 
@@ -336,14 +336,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Name = "EmployeePersonalInformationView";
-            this.Size = new System.Drawing.Size(582, 199);
+            this.Size = new System.Drawing.Size(663, 199);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maritalStatusOptionsLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexOptionsLookupEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexOptionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nationalityIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nationalityOptionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.remarkMemoEdit.Properties)).EndInit();
@@ -355,8 +357,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.firstNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexOptionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personalInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
 

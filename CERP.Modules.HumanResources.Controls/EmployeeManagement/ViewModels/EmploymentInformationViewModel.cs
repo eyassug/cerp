@@ -12,6 +12,9 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels
         private decimal _salary;
         private string _currency;
         private string _department;
+        private int _departmentID;
+        private string _emailAddress;
+        private string _jobTitle;
 
         public string EmployeeNumber
         {
@@ -96,6 +99,42 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels
                     return;
                 _department = value;
                 OnPropertyChanged("Department");
+            }
+        }
+
+        public int SelectedDepartmentID
+        {
+            get { return _departmentID; }
+            set
+            {
+                if (_departmentID == value)
+                    return;
+                _departmentID = value;
+                OnPropertyChanged("SelectedDepartmentID");
+            }
+        }
+
+        public string JobTitle
+        {
+            get { return _jobTitle; }
+            set
+            {
+                if (_jobTitle == value)
+                    return;
+                _jobTitle = value;
+                OnPropertyChanged("JobTitle");
+            }
+        }
+
+        public string EmailAddress
+        {
+            get { return _emailAddress; }
+            set
+            {
+                if (_emailAddress == value)
+                    return;
+                _emailAddress = value;
+                OnPropertyChanged("EmailAddress");
             }
         }
     }
