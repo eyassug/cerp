@@ -72,6 +72,7 @@
             this.newPayrollTerm.Caption = "New Payroll";
             this.newPayrollTerm.Id = 2;
             this.newPayrollTerm.Name = "newPayrollTerm";
+            this.newPayrollTerm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewPayrollTermItemClick);
             // 
             // hrPage
             // 

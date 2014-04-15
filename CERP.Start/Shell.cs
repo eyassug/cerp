@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
 using CERP.Modules.HumanResources.Controls.EmployeeManagement;
+using CERP.Modules.HumanResources.Controls.Payroll;
 using DevExpress.XtraBars;
 
 namespace CERP.Start
@@ -31,5 +32,10 @@ namespace CERP.Start
         }
 
         #endregion
+
+        private void NewPayrollTermItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenOrActivateTab(new NewPayrollShell());
+        }
     }
 }
