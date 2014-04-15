@@ -35,3 +35,6 @@ CERP.Start/obj/
 *.licx
 CERP.Modules.HumanResources.EmailConsole/obj/
 CERP.Modules.HumanResources.EmailConsole/bin/
+CERP.Web.Tests/obj/
+CERP.Web/obj/
+CERP.Web/bin/

@@ -129,7 +129,7 @@ Global
 		{13A94FAF-7720-4E0B-8588-EAAE7E6D7187} = {764C3214-C565-450A-9EA7-C9E6333414DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.Cryptography.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.Cryptography.5.0.505.0\lib\NET35
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.Cryptography.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.Cryptography.5.0.505.0\lib\NET35
 	EndGlobalSection
 EndGlobal
