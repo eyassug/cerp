@@ -27,7 +27,7 @@ namespace CERP.Start
         {
             Kernel = new StandardKernel(new HumanResourcesModule(new HumanResourcesModuleConfiguration()
                                                                      {
-                                                                         ConnectionString = @"Data Source=.\SQLSERVER;Initial Catalog=CERP;Integrated Security=True;"
+                                                                         ConnectionString = @"Data Source=.;Initial Catalog=CERP;Integrated Security=True;"
                                                                      }));
         }
     }

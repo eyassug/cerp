@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shell));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnEmployees = new DevExpress.XtraBars.BarButtonItem();
@@ -36,9 +37,9 @@
             this.employeesPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.payrollPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.tabManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
-            this.smallImageCollection = new DevExpress.Utils.ImageCollection();
-            this.largeImageCollection = new DevExpress.Utils.ImageCollection();
+            this.tabManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.smallImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.largeImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smallImageCollection)).BeginInit();
@@ -47,6 +48,9 @@
             // 
             // ribbon
             // 
+            this.ribbon.ApplicationIcon = global::CERP.Start.Properties.Resources.images__3_;
+            this.ribbon.AutoSizeItems = true;
+            this.ribbon.BackColor = System.Drawing.Color.Silver;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -64,6 +68,7 @@
             // 
             this.btnEmployees.Caption = "Employees";
             this.btnEmployees.Id = 1;
+            this.btnEmployees.LargeGlyph = global::CERP.Start.Properties.Resources.download;
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnEmployeesClick);
             // 
@@ -71,6 +76,7 @@
             // 
             this.newPayrollTerm.Caption = "New Payroll";
             this.newPayrollTerm.Id = 2;
+            this.newPayrollTerm.LargeGlyph = global::CERP.Start.Properties.Resources.payroll;
             this.newPayrollTerm.Name = "newPayrollTerm";
             this.newPayrollTerm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewPayrollTermItemClick);
             // 
@@ -120,6 +126,7 @@
             this.ClientSize = new System.Drawing.Size(442, 449);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Shell";
             this.Ribbon = this.ribbon;
