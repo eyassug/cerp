@@ -15,6 +15,7 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels
         private int _departmentID;
         private string _emailAddress;
         private string _jobTitle;
+        private List<LookUpViewModel> _departmentOptions;
 
         public string EmployeeNumber
         {
@@ -89,7 +90,18 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels
             }
         }
 
-        public List<LookUpViewModel> DepartmentOptions { get; set; }
+        public List<LookUpViewModel> DepartmentOptions
+        {
+            get
+            {
+                return new List<LookUpViewModel>()
+                           {
+                               new LookUpViewModel {DisplayMember = "Software Department", ValueMember = 1},
+                               new LookUpViewModel {DisplayMember = "Finance & Administration", ValueMember = 2}
+                           };
+            }
+            set { _departmentOptions = value; }
+        }
         public string Department
         {
             get { return _department; }

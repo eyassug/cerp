@@ -21,20 +21,24 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement
             InitializeComponent();
             _employeeService = new EmployeeService();
             _departmentService = new DepartmentService();
-            _addEmployeeViewModel.EmploymentInformation.DepartmentOptions = _departmentService.GetDepartments().Select(d => new LookUpViewModel
-                                                                                                                                {
-                                                                                                                                    DisplayMember = d.Name,
-                                                                                                                                    ValueMember = d.DepartmentID
-                                                                                                                                }).ToList();
+            ////_addEmployeeViewModel.EmploymentInformation.DepartmentOptions = _departmentService.GetDepartments().Select(d => new LookUpViewModel
+            //                                                                                                                    {
+            //                                                                                                                        DisplayMember = d.Name,
+            //                                                                                                                        ValueMember = d.DepartmentID
+            //                                                                                                                    }).ToList();
             employeeBindingSource.DataSource = _addEmployeeViewModel;
             employeePersonalInformationView.PersonalInformation = _addEmployeeViewModel.PersonalInformation;
-            employmentInformationView.EmploymentInformation = _addEmployeeViewModel.EmploymentInformation;
+            employmentInformationView.Departments = _departmentService.GetDepartments().Select(d => new LookUpViewModel
+            {
+                DisplayMember = d.Name,
+                ValueMember = d.DepartmentID
+            }).ToList();
         }
 
         void Save()
         {
             var personalInformation = employeePersonalInformationView.PersonalInformation;
-            var employmentInformation = employmentInformationView.EmploymentInformation;
+            var employmentInformation = employmentInformationView;
             _employeeService.Add(new Employee
                                      {
                                          FirstName = personalInformation.FirstName,
@@ -44,7 +48,7 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement
                                          Gender = (personalInformation.Sex == SexOptions.Male ? Gender.Male : Gender.Female),
                                          MaritalStatus = MaritalStatus.Single,
                                          Salary = employmentInformation.Salary,
-                                         Department = _departmentService.GetDepartments().Single(d => d.Name == employmentInformation.Department),
+                                         Department = _departmentService.GetDepartments().Single(d => d.DepartmentID == employmentInformation.SelectedDepartmentID),
                                          EmailAddress = employmentInformation.EmailAddress,
                                          JobTitle = employmentInformation.JobTitle,
                                          PaymentFrequency = PaymentFrequency.Monthly
@@ -61,10 +65,10 @@ namespace CERP.Modules.HumanResources.Controls.EmployeeManagement
             }
             catch (Exception ex)
             {
-                var message = string.Format("Couldn't save employee record. Error:{0}",ex.Message);
+                var message = string.Format("Couldn't save employee record. Error:{0}", ex.Message);
                 XtraMessageBox.Show(message);
             }
-           
+
         }
     }
 }
