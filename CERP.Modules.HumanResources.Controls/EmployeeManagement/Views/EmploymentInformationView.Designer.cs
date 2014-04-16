@@ -33,13 +33,13 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl10 = new DevExpress.XtraLayout.LayoutControl();
+            this.jobTitleTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.addDepartmentHyperLink = new DevExpress.XtraEditors.HyperLinkEdit();
             this.statusIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.employeeTypeLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
-            this.employmentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nodeIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
-            this.yearCountTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.salaryTextEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.departmentLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.emailAddressTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.salaryTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.hireDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.employeeNoTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -53,25 +53,24 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem61 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.departmentOptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employmentTypeOptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employmentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl10)).BeginInit();
             this.layoutControl10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jobTitleTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addDepartmentHyperLink.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeTypeLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nodeIdLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yearCountTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailAddressTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDateDateEdit.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeNoTextEdit.Properties)).BeginInit();
@@ -86,12 +85,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem61)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentOptionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentTypeOptionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -118,13 +116,13 @@
             // 
             // layoutControl10
             // 
-            this.layoutControl10.Controls.Add(this.textEdit1);
+            this.layoutControl10.Controls.Add(this.jobTitleTextEdit);
             this.layoutControl10.Controls.Add(this.addDepartmentHyperLink);
             this.layoutControl10.Controls.Add(this.statusIdLookUpEdit);
             this.layoutControl10.Controls.Add(this.employeeTypeLookUpEdit);
-            this.layoutControl10.Controls.Add(this.nodeIdLookUpEdit);
-            this.layoutControl10.Controls.Add(this.yearCountTextEdit);
-            this.layoutControl10.Controls.Add(this.salaryTextEdit1);
+            this.layoutControl10.Controls.Add(this.departmentLookUpEdit);
+            this.layoutControl10.Controls.Add(this.emailAddressTextEdit);
+            this.layoutControl10.Controls.Add(this.salaryTextEdit);
             this.layoutControl10.Controls.Add(this.hireDateDateEdit);
             this.layoutControl10.Controls.Add(this.employeeNoTextEdit);
             this.layoutControl10.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -135,6 +133,15 @@
             this.layoutControl10.Size = new System.Drawing.Size(616, 132);
             this.layoutControl10.TabIndex = 0;
             this.layoutControl10.Text = "layoutControl10";
+            // 
+            // jobTitleTextEdit
+            // 
+            this.jobTitleTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "JobTitle", true));
+            this.jobTitleTextEdit.Location = new System.Drawing.Point(104, 62);
+            this.jobTitleTextEdit.Name = "jobTitleTextEdit";
+            this.jobTitleTextEdit.Size = new System.Drawing.Size(204, 20);
+            this.jobTitleTextEdit.StyleController = this.layoutControl10;
+            this.jobTitleTextEdit.TabIndex = 140;
             // 
             // addDepartmentHyperLink
             // 
@@ -168,13 +175,13 @@
             // 
             // employeeTypeLookUpEdit
             // 
+            this.employeeTypeLookUpEdit.Enabled = false;
             this.employeeTypeLookUpEdit.Location = new System.Drawing.Point(414, 12);
             this.employeeTypeLookUpEdit.Name = "employeeTypeLookUpEdit";
             this.employeeTypeLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.employeeTypeLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmploymentType", "Employment Type", 95, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.employeeTypeLookUpEdit.Properties.DataSource = this.employmentTypeOptionsBindingSource;
             this.employeeTypeLookUpEdit.Properties.DisplayMember = "DisplayMember";
             this.employeeTypeLookUpEdit.Properties.NullText = "[Select Employment Type]";
             this.employeeTypeLookUpEdit.Properties.ValueMember = "ValueMember";
@@ -182,45 +189,41 @@
             this.employeeTypeLookUpEdit.StyleController = this.layoutControl10;
             this.employeeTypeLookUpEdit.TabIndex = 13;
             // 
-            // employmentInfoBindingSource
+            // departmentLookUpEdit
             // 
-            this.employmentInfoBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.EmploymentInformationViewModel);
-            // 
-            // nodeIdLookUpEdit
-            // 
-            this.nodeIdLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "SelectedDepartmentID", true));
-            this.nodeIdLookUpEdit.Location = new System.Drawing.Point(104, 36);
-            this.nodeIdLookUpEdit.Name = "nodeIdLookUpEdit";
-            this.nodeIdLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.departmentLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "SelectedDepartmentID", true));
+            this.departmentLookUpEdit.Location = new System.Drawing.Point(104, 36);
+            this.departmentLookUpEdit.Name = "departmentLookUpEdit";
+            this.departmentLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nodeIdLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.departmentLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NodeName", "Department Name", 65, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.nodeIdLookUpEdit.Properties.DataSource = this.departmentOptionsBindingSource;
-            this.nodeIdLookUpEdit.Properties.DisplayMember = "DisplayMember";
-            this.nodeIdLookUpEdit.Properties.NullText = "[Select Department ]";
-            this.nodeIdLookUpEdit.Properties.ValueMember = "ValueMember";
-            this.nodeIdLookUpEdit.Size = new System.Drawing.Size(150, 20);
-            this.nodeIdLookUpEdit.StyleController = this.layoutControl10;
-            this.nodeIdLookUpEdit.TabIndex = 12;
+            this.departmentLookUpEdit.Properties.DataSource = this.departmentBindingSource;
+            this.departmentLookUpEdit.Properties.DisplayMember = "DisplayMember";
+            this.departmentLookUpEdit.Properties.NullText = "[Select Department ]";
+            this.departmentLookUpEdit.Properties.ValueMember = "ValueMember";
+            this.departmentLookUpEdit.Size = new System.Drawing.Size(150, 20);
+            this.departmentLookUpEdit.StyleController = this.layoutControl10;
+            this.departmentLookUpEdit.TabIndex = 12;
             // 
-            // yearCountTextEdit
+            // emailAddressTextEdit
             // 
-            this.yearCountTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "EmailAddress", true));
-            this.yearCountTextEdit.Enabled = false;
-            this.yearCountTextEdit.Location = new System.Drawing.Point(104, 86);
-            this.yearCountTextEdit.Name = "yearCountTextEdit";
-            this.yearCountTextEdit.Size = new System.Drawing.Size(204, 20);
-            this.yearCountTextEdit.StyleController = this.layoutControl10;
-            this.yearCountTextEdit.TabIndex = 10;
+            this.emailAddressTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "EmailAddress", true));
+            this.emailAddressTextEdit.Enabled = false;
+            this.emailAddressTextEdit.Location = new System.Drawing.Point(104, 86);
+            this.emailAddressTextEdit.Name = "emailAddressTextEdit";
+            this.emailAddressTextEdit.Size = new System.Drawing.Size(204, 20);
+            this.emailAddressTextEdit.StyleController = this.layoutControl10;
+            this.emailAddressTextEdit.TabIndex = 10;
             // 
-            // salaryTextEdit1
+            // salaryTextEdit
             // 
-            this.salaryTextEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "Salary", true));
-            this.salaryTextEdit1.Location = new System.Drawing.Point(414, 60);
-            this.salaryTextEdit1.Name = "salaryTextEdit1";
-            this.salaryTextEdit1.Size = new System.Drawing.Size(190, 20);
-            this.salaryTextEdit1.StyleController = this.layoutControl10;
-            this.salaryTextEdit1.TabIndex = 15;
+            this.salaryTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "Salary", true));
+            this.salaryTextEdit.Location = new System.Drawing.Point(414, 60);
+            this.salaryTextEdit.Name = "salaryTextEdit";
+            this.salaryTextEdit.Size = new System.Drawing.Size(190, 20);
+            this.salaryTextEdit.StyleController = this.layoutControl10;
+            this.salaryTextEdit.TabIndex = 15;
             // 
             // hireDateDateEdit
             // 
@@ -291,7 +294,7 @@
             // 
             // layoutControlItem62
             // 
-            this.layoutControlItem62.Control = this.yearCountTextEdit;
+            this.layoutControlItem62.Control = this.emailAddressTextEdit;
             this.layoutControlItem62.CustomizationFormText = "Year Count:";
             this.layoutControlItem62.Location = new System.Drawing.Point(0, 74);
             this.layoutControlItem62.Name = "layoutControlItem62";
@@ -321,7 +324,7 @@
             // 
             // layoutControlItem66
             // 
-            this.layoutControlItem66.Control = this.salaryTextEdit1;
+            this.layoutControlItem66.Control = this.salaryTextEdit;
             this.layoutControlItem66.CustomizationFormText = "Salary:";
             this.layoutControlItem66.Location = new System.Drawing.Point(310, 48);
             this.layoutControlItem66.Name = "layoutControlItem66";
@@ -369,13 +372,23 @@
             // 
             // layoutControlItem61
             // 
-            this.layoutControlItem61.Control = this.nodeIdLookUpEdit;
+            this.layoutControlItem61.Control = this.departmentLookUpEdit;
             this.layoutControlItem61.CustomizationFormText = "Department:";
             this.layoutControlItem61.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem61.Name = "layoutControlItem61";
             this.layoutControlItem61.Size = new System.Drawing.Size(246, 26);
             this.layoutControlItem61.Text = "Department:";
             this.layoutControlItem61.TextSize = new System.Drawing.Size(89, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.jobTitleTextEdit;
+            this.layoutControlItem3.CustomizationFormText = "Job Title";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(300, 24);
+            this.layoutControlItem3.Text = "Job Title";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(89, 13);
             // 
             // layoutControlGroup1
             // 
@@ -402,34 +415,13 @@
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
             // 
-            // textEdit1
+            // employmentInfoBindingSource
             // 
-            this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "JobTitle", true));
-            this.textEdit1.Location = new System.Drawing.Point(104, 62);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(204, 20);
-            this.textEdit1.StyleController = this.layoutControl10;
-            this.textEdit1.TabIndex = 140;
+            this.employmentInfoBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.EmploymentInformationViewModel);
             // 
-            // layoutControlItem3
+            // departmentBindingSource
             // 
-            this.layoutControlItem3.Control = this.textEdit1;
-            this.layoutControlItem3.CustomizationFormText = "Job Title";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(300, 24);
-            this.layoutControlItem3.Text = "Job Title";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(89, 13);
-            // 
-            // departmentOptionsBindingSource
-            // 
-            this.departmentOptionsBindingSource.DataMember = "DepartmentOptions";
-            this.departmentOptionsBindingSource.DataSource = this.employmentInfoBindingSource;
-            // 
-            // employmentTypeOptionsBindingSource
-            // 
-            this.employmentTypeOptionsBindingSource.DataMember = "EmploymentTypeOptions";
-            this.employmentTypeOptionsBindingSource.DataSource = this.employmentInfoBindingSource;
+            this.departmentBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.LookUpViewModel);
             // 
             // EmploymentInformationView
             // 
@@ -444,13 +436,13 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl10)).EndInit();
             this.layoutControl10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.jobTitleTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addDepartmentHyperLink.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeTypeLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nodeIdLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yearCountTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailAddressTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDateDateEdit.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDateDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeNoTextEdit.Properties)).EndInit();
@@ -465,12 +457,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem61)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentOptionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentTypeOptionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -482,9 +473,9 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl10;
         private DevExpress.XtraEditors.LookUpEdit statusIdLookUpEdit;
         private DevExpress.XtraEditors.LookUpEdit employeeTypeLookUpEdit;
-        private DevExpress.XtraEditors.LookUpEdit nodeIdLookUpEdit;
-        private DevExpress.XtraEditors.TextEdit yearCountTextEdit;
-        private DevExpress.XtraEditors.TextEdit salaryTextEdit1;
+        private DevExpress.XtraEditors.LookUpEdit departmentLookUpEdit;
+        private DevExpress.XtraEditors.TextEdit emailAddressTextEdit;
+        private DevExpress.XtraEditors.TextEdit salaryTextEdit;
         private DevExpress.XtraEditors.DateEdit hireDateDateEdit;
         private DevExpress.XtraEditors.TextEdit employeeNoTextEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
@@ -502,9 +493,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit jobTitleTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private System.Windows.Forms.BindingSource departmentOptionsBindingSource;
-        private System.Windows.Forms.BindingSource employmentTypeOptionsBindingSource;
+        private System.Windows.Forms.BindingSource departmentBindingSource;
     }
 }

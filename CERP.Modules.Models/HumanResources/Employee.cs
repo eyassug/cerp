@@ -41,6 +41,6 @@ namespace CERP.Models.HumanResources
         public bool IsCurrent { get; set; }
         [Column("HireDate")]
         public DateTime DateOfHire { get; set; }
-        public Guid? Rowguid { get; set; }
+        
     }
 }
