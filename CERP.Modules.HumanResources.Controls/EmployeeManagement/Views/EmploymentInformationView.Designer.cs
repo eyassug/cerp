@@ -34,10 +34,12 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl10 = new DevExpress.XtraLayout.LayoutControl();
             this.jobTitleTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.employmentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addDepartmentHyperLink = new DevExpress.XtraEditors.HyperLinkEdit();
             this.statusIdLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.employeeTypeLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.departmentLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailAddressTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.salaryTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.hireDateDateEdit = new DevExpress.XtraEditors.DateEdit();
@@ -56,8 +58,6 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.employmentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -65,10 +65,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl10)).BeginInit();
             this.layoutControl10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobTitleTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addDepartmentHyperLink.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusIdLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeTypeLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailAddressTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDateDateEdit.Properties.VistaTimeProperties)).BeginInit();
@@ -88,8 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -142,6 +142,10 @@
             this.jobTitleTextEdit.Size = new System.Drawing.Size(204, 20);
             this.jobTitleTextEdit.StyleController = this.layoutControl10;
             this.jobTitleTextEdit.TabIndex = 140;
+            // 
+            // employmentInfoBindingSource
+            // 
+            this.employmentInfoBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.EmploymentInformationViewModel);
             // 
             // addDepartmentHyperLink
             // 
@@ -206,10 +210,13 @@
             this.departmentLookUpEdit.StyleController = this.layoutControl10;
             this.departmentLookUpEdit.TabIndex = 12;
             // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.LookUpViewModel);
+            // 
             // emailAddressTextEdit
             // 
             this.emailAddressTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employmentInfoBindingSource, "EmailAddress", true));
-            this.emailAddressTextEdit.Enabled = false;
             this.emailAddressTextEdit.Location = new System.Drawing.Point(104, 86);
             this.emailAddressTextEdit.Name = "emailAddressTextEdit";
             this.emailAddressTextEdit.Size = new System.Drawing.Size(204, 20);
@@ -415,14 +422,6 @@
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
             // 
-            // employmentInfoBindingSource
-            // 
-            this.employmentInfoBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.EmploymentInformationViewModel);
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(CERP.Modules.HumanResources.Controls.EmployeeManagement.ViewModels.LookUpViewModel);
-            // 
             // EmploymentInformationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,10 +436,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl10)).EndInit();
             this.layoutControl10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.jobTitleTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addDepartmentHyperLink.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusIdLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeTypeLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailAddressTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hireDateDateEdit.Properties.VistaTimeProperties)).EndInit();
@@ -460,8 +461,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employmentInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
