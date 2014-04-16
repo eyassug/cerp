@@ -16,6 +16,8 @@ namespace CERP.Modules.HumanResources.DataAccess
         public DbSet<Models.HumanResources.WagePaymentDetail> WagePaymentDetails { get; set; }
         public DbSet<Models.HumanResources.WagePaymentStatusHistory> WagePaymentStatusHistory { get; set; }
         public DbSet<Models.HumanResources.PaySlipQueue> PaySlipQueues { get; set; }
+        public DbSet<Models.HumanResources.EmployeePayHistory> EmployeePayHistory { get; set; }
+        public DbSet<Models.HumanResources.EmployeeDepartmentHistory> EmployeeDepartmentHistory { get; set; }
         
     }
 }

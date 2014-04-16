@@ -7,7 +7,7 @@ namespace CERP.Models.HumanResources
     [Table("EmployeePayHistory", Schema = "HumanResources")]
     public class EmployeeDepartmentHistory
     {
-        [Key,Column(Order = 1)]
+        [Key,Column(Order = 1)][ForeignKey("Employee")]
         public int EmployeeID { get; set; }
         [Key, Column(Order = 1)]
         public int DepartmentID { get; set; }
@@ -16,6 +16,8 @@ namespace CERP.Models.HumanResources
         [Key, Column(Order = 1)]
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+
+        public virtual Employee Employee { get; set; }
 
     }
 }
