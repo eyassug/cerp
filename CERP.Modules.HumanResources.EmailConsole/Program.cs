@@ -16,7 +16,7 @@ namespace CERP.Modules.HumanResources.EmailConsole
         public static IKernel Kernel;
         public static string ConnectionString
         {
-            get { return @"Data Source=.\SQLSERVER;Initial Catalog=CERP;Integrated Security=True;"; }
+            get { return @"Data Source=.;Initial Catalog=CERP;Integrated Security=True;"; }
         }
 
         public static string TemporaryFileDirectory
@@ -40,11 +40,29 @@ namespace CERP.Modules.HumanResources.EmailConsole
 
         static void Main(string[] args)
         {
+            while (true)
+            {
+                try
+                {
+                    CheckForAndSendQueuedSlips();
+                }
+                catch (Exception)
+                {
+
+                }
+                
+                Thread.Sleep(TimeSpan.FromSeconds(30));
+            }
+            
+        }
+
+        static void CheckForAndSendQueuedSlips()
+        {
             // Clear temp directory
             ClearTempDirectory();
 
             var queuedPaySlips = _paySlipMailService.GetQueuedPaySlips();
-            while(queuedPaySlips.Any())
+            while (queuedPaySlips.Any())
             {
                 var slip = queuedPaySlips.Peek();
                 try
@@ -57,7 +75,6 @@ namespace CERP.Modules.HumanResources.EmailConsole
                     Thread.Sleep(TimeSpan.FromSeconds(30));
                 }
             }
-            
         }
 
         static void ClearTempDirectory()
