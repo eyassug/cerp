@@ -85,7 +85,37 @@ namespace CERP.Modules.HumanResources.Services
         {
             using(var context = new CERPContext())
             {
-                
+                var newEmployee = new Models.HumanResources.Employee
+                                      {
+                                          FirstName = employee.FirstName,
+                                          LastName = employee.LastName,
+                                          DateOfBirth = employee.DateOfBirth,
+                                          EmailAddress = employee.EmailAddress,
+                                          EmployeeMaritalStatus = employee.MaritalStatus,
+                                          DateOfHire = DateTime.Today,
+                                          IsCurrent = true,
+                                          Gender = employee.Gender,
+                                          JobTitle = employee.JobTitle,
+                                          MiddleName = employee.MiddleName
+                                      };
+                var department = new Models.HumanResources.EmployeeDepartmentHistory
+                                     {
+                                         Employee = newEmployee,
+                                         DepartmentID = employee.Department.DepartmentID,
+                                         ShiftID = 1,
+                                         StartDate = DateTime.Today
+                                     };
+                var payInfo = new Models.HumanResources.EmployeePayHistory
+                                     {
+                                         Employee = newEmployee,
+                                         PayFrequency = (byte)employee.PaymentFrequency,
+                                         Rate = employee.Salary,
+                                         RateChangedDate = DateTime.Today
+                                     };
+                context.Employees.Add(newEmployee);
+                context.EmployeeDepartmentHistory.Add(department);
+                context.EmployeePayHistory.Add(payInfo);
+                context.SaveChanges();
             }
         }
 
